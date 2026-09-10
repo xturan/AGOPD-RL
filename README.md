@@ -13,17 +13,21 @@
 [![Domain](https://img.shields.io/badge/Domain-math%20reasoning-2ea44f)](https://arxiv.org/abs/2501.12948)
 [![Hardware](https://img.shields.io/badge/Hardware-4%C3%97A100%2080G-76b900)](#硬件与拓扑)
 
-> 本仓库只包含代码、研究与论文材料,**不含模型权重与训练数据**;所有发布文件已去除云端主机、凭据与个人路径。
+> 本仓库只包含代码、研究与研究报告材料,**不含模型权重与训练数据**;所有发布文件已去除云端主机、凭据与个人路径。
 
-## 📄 论文(中英双版 · 45 页深度研究报告)
+## 📄 研究报告(中英双版 · 45 页)
 
 | 版本 | 语言 | 页数 | HTML（自包含，可离线） | PDF |
 |---|---|---:|---|---|
 | AGOPD v6.0 · restructured | 中文 | 45 | [`….html`](reports/AGOPD_paper_v6_0_restructured_20260908.html) | [`….pdf`](reports/AGOPD_paper_v6_0_restructured_20260908.pdf) |
 | AGOPD v6.0 · restructured | English | 59 | [`…_en.html`](reports/AGOPD_paper_v6_0_restructured_20260908_en.html) | [`…_en.pdf`](reports/AGOPD_paper_v6_0_restructured_20260908_en.pdf) |
 
-> 两份均为**自包含 HTML**(图表以 data-URI 内嵌,单文件即可离线阅读),覆盖:负迁移机制诊断 → 受控四臂对照 → 状态级可恢复性探针 → 跨规模验证与工程附录。
-> 仓库同时提供 `src/`、`scripts/`、`patches/` 与 `reports/figures/`,可对照论文逐节复现。
+(图表以 data-URI 内嵌,单文件即可离线阅读),覆盖:负迁移机制诊断 → 受控四臂对照 → 状态级可恢复性探针 → 跨规模验证与工程附录。
+> 仓库同时提供 `src/`、`scripts/`、`patches/` 与 `reports/figures/`,可对照研究报告逐节复现。
+
+![图 3 · AGOPD 方法结构](reports/figures/fig3_agopd_method_structure.png)
+
+*图 3 · AGOPD 方法结构。负优势门在轨迹级选择相对劣势的学生轨迹;教师胜任门在题目级要求教师模型独立求解并通过同一结果验证器;只有同时通过两级门控的学生访问状态获得非零蒸馏权重。*
 
 ## 这个项目解决什么问题
 
@@ -131,7 +135,7 @@ agopd-rl/
 ├── configs/              # 环境与运行配置
 ├── patches/              # 针对 verl 的补丁(standalone rollout、padded logprob 等)
 ├── docs/                 # 方法与设计说明(实验运行日志不在开源范围)
-├── reports/              # 论文(中英双版 HTML)、图表、评估汇总 JSON
+├── reports/              # 研究报告(中英双版 HTML/PDF)、图表、评估汇总 JSON
 ├── pyproject.toml
 └── LICENSE
 ```
