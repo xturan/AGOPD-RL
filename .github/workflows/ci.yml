@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  sanity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Byte-compile Python sources
+        run: python -m compileall -q src scripts
+
+      - name: Shell syntax check
+        run: |
+          fail=0
+          for f in scripts/*.sh; do
+            echo "bash -n $f"
+            bash -n "$f" || fail=1
+          done
+          exit $fail
+
+      - name: Guard against committed secrets / machine paths
+        run: |
+          if grep -rInE "(/home/amax|/opt/data|22560436|10\.66\.27\.[0-9]+|ANTHROPIC_AUTH_TOKEN|deepseek_key)" \
+               --exclude-dir=.git --exclude=ci.yml . ; then
+            echo "::error::found machine-specific paths or secrets"; exit 1
+          fi
+          echo "clean"

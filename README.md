@@ -15,11 +15,11 @@
 在线策略蒸馏让学生在自己的轨迹上接受教师逐词元监督,常被当作"免费的密集信号"。但在小模型 + 结果奖励 RL 的组合里,它经常**不是零收益,而是负收益**:
 
 - 学生答对的轨迹上也被施加蒸馏,会把正确行为改回教师分布;
-- 教师本身可能**弱于**训后学生(本仓库在 4B 上实测:教师 53.3% vs 训后学生 60.7%);
-- 无条件、固定系数的蒸馏项会主导梯度(实测占 actor loss 的 **77.8%**),把 RL 变成"对教师做 SFT";
-- 后果是可观测的:策略熵下降约 32%、回答变长、答案解析率下降、固定评估显著变差。
+- 教师本身可能**弱于**训后学生:是否占优要按**状态**判断,而不是看平均分;
+- 无条件、固定系数的蒸馏项会主导梯度,把 RL 变成"对教师做 SFT";
+- 后果通常表现为:策略熵下降、回答变长、答案解析率下降、固定评估变差。
 
-本仓库用**同数据、同通道、同评估**的受控臂回答:负迁移从何而来,什么样的门控/目标/调度能把它收回来。
+本仓库提供**同数据、同通道、同评估**的受控实验脚手架,用于回答:负迁移从何而来,什么样的门控/目标/调度能把它收回来。
 
 ## 方法流水线
 
@@ -49,21 +49,6 @@
 
 结论:无条件 RL+OPD 显著拖累;门控收回大部分损失,但未超越纯 GRPO。
 
-### 4B × 8B：更强学生 / 更强教师下的验证（本仓库新增）
-
-| 臂 | 配置 | strict | semantic |
-|---|---|---:|---:|
-| A | 纯 GRPO(LoRA r16, 160 步) | **42.09%** | 41.70% |
-| B | 无条件 RL+OPD(hard-CE, coef 1.0) | 34.96% | 36.13% |
-| C | 门控 AGOPD | 运行中 | — |
-| D | 门控 + 反向 KL + 系数调度 | 待跑 | — |
-
-- B − A = **−7.13pp**(95% CI [−9.95, −4.30],McNemar p≈0),比 1.7B 的 −4.30pp 更大;
-- 教师真实轨迹探针(同 300 道训练题):**教师 53.3% < 训后学生 60.7%**(配对 p=0.047);
-- 训练曲线:B 从第 4 步起在线奖励即低于 A,熵低 32%、回答更长、解析率更低——**运行健康,是机制问题而非崩溃**。
-
-完整论文与图表见 [`reports/AGOPD_paper_v6_2_state_probe_20260909.html`](reports/AGOPD_paper_v6_2_state_probe_20260909.html) 与 [`reports/figures/`](reports/figures)。
-
 ## 何时该用 OPD（工程结论）
 
 | 门槛 | 判据 |
@@ -81,14 +66,14 @@
 agopd-rl/
 ├── src/agopd/            # 核心包:gating(优势门/教师胜任门)、reward、data
 ├── scripts/              # 训练 wrapper、普查、评估、分析与探针脚本
-│   ├── run_4b8b_verify.sh          # 4B 验证臂 A/B/C/D 启动器
+│   ├── run_4b8b_verify.sh          # 参数化多卡 RL / OPD 启动器
 │   ├── run_grpo_vanilla_opd.sh     # verl OPD 训练入口(参数化)
 │   ├── evaluate_dapo_vllm.py       # 固定 1,024 评估(direct-LoRA)
 │   ├── census_scale.py             # 跨规模能力普查(n=8)
-│   └── analyze_4b8b_verify.py      # 两臂逐题配对 Δ / CI / McNemar
+│   └── analyze_4b8b_verify.py      # 两臂逐题配对 Δ / 95% CI / McNemar
 ├── configs/              # 环境与运行配置
 ├── patches/              # 针对 verl 的补丁(standalone rollout、padded logprob 等)
-├── docs/                 # 研究记录:协议、计划、结果、机制分析、evolution
+├── docs/                 # 方法与设计说明(实验运行日志不在开源范围)
 ├── reports/              # 论文 HTML、图表、评估汇总 JSON
 ├── pyproject.toml
 └── LICENSE
@@ -110,8 +95,8 @@ python scripts/census_scale.py --model ${AGOPD_ROOT}/models/Qwen3-4B \
     --train-file data/dapo-verl-v1/train.parquet --n 8 --max-prompts 16164 \
     --shard-idx 0 --n-shards 4 --out outputs/census_4b_full
 
-# 4) 训练一臂(示例:4B 门控 AGOPD)
-ARM=C TRAIN_STEPS=160 bash scripts/run_4b8b_verify.sh
+# 4) 训练一臂(纯 GRPO 示例;门控/软目标/系数调度由 ARM 与超参控制)
+ARM=A TRAIN_STEPS=160 bash scripts/run_4b8b_verify.sh
 
 # 5) 合并 FSDP 检查点并做固定 1,024 评估(direct-LoRA)
 python -m verl.model_merger merge --backend fsdp \
@@ -128,7 +113,7 @@ python scripts/analyze_4b8b_verify.py --a-pattern <A>_s?.jsonl --b-pattern <B>_s
 
 - **数据可比性**:所有需要比较的实验显式传 `data.seed=42`(verl 默认不播种采样序列)。
 - **固定评估**:`data/dapo-verl-v1/val.parquet`(1,024 题),非思考模式、`max_new_tokens=2048`、`temperature 0.6 / top_p 0.95 / top_k 20`、`seed 42`,strict 与 semantic 双口径。
-- **训练通道**:4B 使用已验证的 LoRA `r16 + lr=1e-4`(r8 + lr1e-6 的通道过窄,已废弃)。
+- **训练通道**:LoRA `r16 + lr=1e-4`(过窄的 r8 + lr1e-6 通道不适用于该底座)。
 - **拓扑**:3+1 混合(学生 FSDP + 同卡 rollout 复用 3 卡,教师 1 卡),`rollout.nnodes=0`。
 - **评估口径**:LoRA 检查点必须经 `--lora-adapter` 直接评估;直接评合并目录会退化为 Base。
 
