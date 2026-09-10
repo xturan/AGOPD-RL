@@ -7,8 +7,23 @@
 [![vLLM](https://img.shields.io/badge/Rollout-vLLM-30a2ff)](https://github.com/vllm-project/vllm)
 [![LoRA](https://img.shields.io/badge/Adapter-LoRA%20r16-8a5cf6)](https://arxiv.org/abs/2106.09685)
 [![License](https://img.shields.io/badge/license-Apache--2.0-2ea44f)](LICENSE)
+[![RL](https://img.shields.io/badge/RL-GRPO-1f6feb)](https://arxiv.org/abs/2402.03300)
+[![OPD](https://img.shields.io/badge/OPD-on--policy-155b66)](https://arxiv.org/abs/2306.13649)
+[![RFT](https://img.shields.io/badge/RFT-rejection--transfer-8a5cf6)](#主要结果)
+[![Domain](https://img.shields.io/badge/Domain-math%20reasoning-2ea44f)](https://arxiv.org/abs/2501.12948)
+[![Hardware](https://img.shields.io/badge/Hardware-4%C3%97A100%2080G-76b900)](#硬件与拓扑)
 
 > 本仓库只包含代码、研究与论文材料,**不含模型权重与训练数据**;所有发布文件已去除云端主机、凭据与个人路径。
+
+## 📄 论文(中英双版 · 45 页深度研究报告)
+
+| 版本 | 语言 | 规模 | 链接 |
+|---|---|---:|---|
+| AGOPD v6.2 · state-probe | 中文 | ~45 页 | [`reports/AGOPD_paper_v6_2_state_probe_20260909.html`](reports/AGOPD_paper_v6_2_state_probe_20260909.html) |
+| AGOPD v6.0 · restructured | English | ~45 页 | [`reports/AGOPD_paper_v6_0_restructured_20260908_en.html`](reports/AGOPD_paper_v6_0_restructured_20260908_en.html) |
+
+> 两份均为**自包含 HTML**(图表以 data-URI 内嵌,单文件即可离线阅读),覆盖:负迁移机制诊断 → 受控四臂对照 → 状态级可恢复性探针 → 跨规模验证与工程附录。
+> 仓库同时提供 `src/`、`scripts/`、`patches/` 与 `reports/figures/`,可对照论文逐节复现。
 
 ## 这个项目解决什么问题
 
@@ -100,7 +115,7 @@ agopd-rl/
 ├── configs/              # 环境与运行配置
 ├── patches/              # 针对 verl 的补丁(standalone rollout、padded logprob 等)
 ├── docs/                 # 方法与设计说明(实验运行日志不在开源范围)
-├── reports/              # 论文 HTML、图表、评估汇总 JSON
+├── reports/              # 论文(中英双版 HTML)、图表、评估汇总 JSON
 ├── pyproject.toml
 └── LICENSE
 ```
