@@ -1,6 +1,6 @@
 # AGOPD-RL
 
-面向小模型数学推理的**在线策略蒸馏(OPD)**研究代码库:用受控实验说明"教师词元级监督什么时候有用、什么时候有害",并给出可复现的门控方案。
+面向小模型数学推理的**在线策略蒸馏(OPD)** 研究代码库:用受控实验说明"教师词元级监督什么时候有用、什么时候有害",并给出可复现的门控方案。
 
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![verl](https://img.shields.io/badge/Trainer-verl%20v0.8-1f6feb)](https://github.com/volcengine/verl)
