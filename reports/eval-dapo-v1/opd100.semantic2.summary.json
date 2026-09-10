@@ -1,0 +1,12 @@
+{
+  "input": "reports/eval-dapo-v1/opd100.jsonl",
+  "rows": 1024,
+  "raw_accuracy": 0.1865234375,
+  "semantic_accuracy": 0.1943359375,
+  "strict_contract_accuracy": 0.099609375,
+  "answer_parse_rate": 0.5703125,
+  "answer_prefix_rate": 0.2705078125,
+  "boxed_rate": 0.4375,
+  "truncation_rate": 0.3427734375,
+  "non_truncated_semantic_accuracy": 0.29569093610698366
+}

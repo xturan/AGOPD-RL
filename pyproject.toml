@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agopd-rl"
+version = "0.1.0"
+description = "Advantage-Guided On-Policy Distillation for compute-efficient reasoning RL."
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [{name = "xturan"}]
+requires-python = ">=3.10"
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+    "pandas",
+    "pyarrow",
+    "pytest",
+    "pyyaml",
+    "sympy",
+]
+train = [
+    "accelerate",
+    "codetiming",
+    "datasets",
+    "hydra-core",
+    "omegaconf",
+    "peft",
+    "ray[data,train,tune]",
+    "tensorboard",
+    "tensordict!=0.9.0,>=0.8.0,<=0.10.0",
+    "torchdata",
+    "transformers",
+    "wandb",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

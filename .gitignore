@@ -1,0 +1,25 @@
+# heavy / private artifacts (never commit)
+models/
+checkpoints/
+outputs/
+logs/
+tensorboard/
+data/
+.runtime/
+verl/
+.grok-service/
+.env
+*.env.local
+
+# caches & build
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

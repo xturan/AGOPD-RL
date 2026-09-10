@@ -1,0 +1,44 @@
+--- a/verl/workers/rollout/llm_server.py
++++ b/verl/workers/rollout/llm_server.py
+@@ -294,10 +294,14 @@
+                 * self.rollout_config.data_parallel_size
+                 * self.rollout_config.pipeline_model_parallel_size
+             )
++        # When rollout.nnodes is set, place vLLM in its own Ray resource pool.
++        # This is required on hosts using Exclusive_Process compute mode: a
++        # colocated vLLM subprocess cannot share the FSDP worker's GPU.
++        standalone_rollout = self.rollout_config.nnodes > 0
+         world_size = (
+-            self.worker_group.world_size
+-            if self.worker_group
+-            else self.rollout_config.n_gpus_per_node * self.rollout_config.nnodes
++            self.rollout_config.n_gpus_per_node * self.rollout_config.nnodes
++            if standalone_rollout
++            else self.worker_group.world_size
+         )
+         num_replicas = world_size // rollout_world_size
+@@ -311,10 +315,10 @@
+             for replica_rank in range(num_replicas)
+         ]
+ 
+-        if self.worker_group and self.rollout_config.name != "trtllm":
++        if self.worker_group and not standalone_rollout and self.rollout_config.name != "trtllm":
+             await asyncio.gather(*[server.init_hybrid(self.worker_group) for server in self.rollout_replicas])
+         # TODO: unify trtllm to init_hybrid
+-        elif self.worker_group and self.rollout_config.name == "trtllm":
++        elif self.worker_group and not standalone_rollout and self.rollout_config.name == "trtllm":
+             await asyncio.gather(
+                 *[
+                     server.init_hybrid_colocated(self.worker_group, self.rollout_resource_pool)
+--- a/verl/workers/rollout/vllm_rollout/vllm_rollout.py
++++ b/verl/workers/rollout/vllm_rollout/vllm_rollout.py
+@@ -81,7 +81,12 @@
+         )
+         if replica_rank == -1:
+-            self.replica_rank = rank // rollout_world_size
++            # A standalone server is created once per configured rollout
++            # replica, outside the actor worker group. All actor ranks must
++            # therefore address that same server replica.
++            self.replica_rank = 0 if config.nnodes > 0 else rank // rollout_world_size
+         else:
+             self.replica_rank = replica_rank

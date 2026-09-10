@@ -1,0 +1,14 @@
+{
+  "rows": 1024,
+  "truncated": {"rows": 351, "correct": 0, "accuracy": 0.0},
+  "complete": {"rows": 673, "correct": 191, "accuracy": 0.2838},
+  "answer_marker": {"rows": 277, "correct": 94, "accuracy": 0.3394},
+  "no_answer_marker": {"rows": 747, "correct": 97, "accuracy": 0.1299},
+  "boxed_marker": {"rows": 448, "correct": 145, "accuracy": 0.3237},
+  "no_boxed_marker": {"rows": 576, "correct": 46, "accuracy": 0.0799},
+  "observations": [
+    "All truncated responses were incorrect under the current verifier.",
+    "Correct intermediate calculations can still be followed by an invalid final expression.",
+    "Answer and boxed markers correlate strongly with correctness, but are not sufficient by themselves."
+  ]
+}

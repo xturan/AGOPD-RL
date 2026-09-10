@@ -1,0 +1,5 @@
+{
+  "e8ae9ae6": "### Step 2: Reduce with \\(y=x+\\frac{1}{x}\\) The roots in \\(y\\) are \\(1,\\sqrt2,-\\sqrt2\\). Converting back gives \\[ (x^2-x+1)(x^2-\\sqrt2x+1)(x^2+\\sqrt2x+1). \\] Thus \\(b_1=-1\\), \\(b_2=-\\sqrt2\\), \\(b_3=\\sqrt2\\), while all \\(c_i=1\\). Therefore \\(b_1c_1+b_2c_2+b_3c_3=-1\\). Answer: -1",
+  "e408476f": "Using \\[ \\csc^2\\alpha+\\sec^2\\alpha =\\tan^2\\alpha+\\cot^2\\alpha+2, \\] substitute into the left side: \\[ 5+\\csc^2\\alpha+\\sec^2\\alpha =7+\\tan^2\\alpha+\\cot^2\\alpha. \\] Comparing both sides gives \\(7=k\\). Answer: 7",
+  "db3e2e94": "For the complement event, Juan is not divisible by 3 with probability \\[ \\frac{6}{8}=\\frac34, \\] and Amal is not divisible by 3 with probability \\[ \\frac{4}{6}=\\frac23. \\] Therefore neither is divisible by 3 with probability \\(1/2\\). The desired probability is \\(1-\\frac12=\\frac12\\). Thus \\(k=1,m=2\\), and \\(k+m=3\\). Answer: 3"
+}

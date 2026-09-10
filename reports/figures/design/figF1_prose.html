@@ -1,0 +1,63 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>figF1_prose</title>
+<style>
+:root{--main:#155b66;--red:#9c4b50;--neu:#6f7779;--ink:#243238;--mut:#7b878a;--bg:#f7f7f4;--card:#fff;--line:#e4e7e6;}
+*{box-sizing:border-box;margin:0}
+body{font-family:"PingFang SC","Microsoft YaHei","Georgia","Times New Roman",serif;background:var(--bg);color:var(--ink);-webkit-font-smoothing:antialiased}
+.slide{width:1600px;padding:44px 54px}
+.eyebrow{font-family:Helvetica,Arial,sans-serif;font-size:14px;letter-spacing:.26em;color:var(--main);font-weight:700;text-transform:uppercase;margin-bottom:8px}
+h1{font-size:38px;font-weight:800;letter-spacing:.4px}
+.sub{font-size:16px;color:var(--mut);margin:8px 0 22px;max-width:1280px}
+.frame{display:grid;grid-template-columns:minmax(0,62fr) minmax(0,38fr);gap:26px;align-items:start}
+.prose{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px 30px;font-size:16.5px;line-height:1.78}
+.prose p{margin:0 0 10px;color:#333c40}
+.passage{font-family:"Georgia","Times New Roman",serif;font-size:15.5px;line-height:1.72;color:#3a4347}
+.hl{background:#f8eceb;border-left:4px solid var(--red);padding:2px 8px;display:inline-block;color:#7d3338}
+.box{background:#f3f0ea;border-left:4px solid var(--neu);padding:2px 8px;display:inline-block}
+.pinA{position:relative}
+.ann{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:16px;box-shadow:0 1px 3px rgba(0,0,0,.04)}
+.ann .atag{font-family:Helvetica,Arial,sans-serif;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;display:flex;gap:8px;align-items:center;margin-bottom:10px}
+.a1{color:var(--main)} .a2{color:var(--red)}
+.dotag{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--main)}
+.dotag.red{background:var(--red)}
+.pair{background:#edf3f3;border-left:4px solid var(--main);padding:8px 12px;border-radius:6px;margin:6px 0;font-family:"Georgia",serif;font-size:14px;color:#143f48;line-height:1.6}
+.pair.good{margin-top:8px}
+.wrong{color:#7d3338;text-decoration:line-through;text-decoration-thickness:1.5px;background:#f6e6e5;padding:0 4px}
+.okchip{display:inline-block;background:var(--main);color:#fff;font-size:11.5px;padding:1px 8px;border-radius:12px;margin-top:6px;font-family:Helvetica,sans-serif}
+.why{font-size:14px;color:var(--neu);margin-top:8px;line-height:1.6}
+.why b{color:var(--red)}
+.lead{font-size:13.5px;color:var(--mut);margin:6px 0 2px;font-family:Helvetica,Arial,sans-serif}
+.pnum{font-family:Helvetica,sans-serif;color:var(--mut);font-size:12.5px;margin-top:10px}
+</style></head><body><div class="slide">
+<div class="eyebrow">Appendix F · Same-state continuation — how “续写” actually works</div>
+<h1>教师续写:同一段错误文本,在错误点与 +64 处各接一次</h1>
+<div class="sub">正文为学生在错题上的真实推理片段(节选,英文原文)。红色=学生第一次写错处;框线=距该处 64 词元的上下文。右侧是教师分别从这两处“原样接下去续写”的内容。</div>
+
+<div class="frame">
+ <div class="prose">
+  <p style="font-family:Helvetica,sans-serif;font-size:12.5px;letter-spacing:.14em;color:var(--mut)">学生错误轨迹(节选)— Q: 5-digit numbers, digits ≤ 3, gcd(N,15)=gcd(N,20)=1</p>
+  <div class="passage">
+   …$ \gcd(N, 15)=1 \Rightarrow \gcd(N,3)=1 $ and $ \gcd(N,5)=1 $, so $ N $ must not be divisible by 3 or 5.
+   <p style="margin:10px 0"><span class="ann-mark"><span class="hl">#### Condition 3: $ \gcd(N,20)=1 $. This means $ N $ must be coprime with 20; $ \gcd(N,20)=1 \Rightarrow \gcd(N,4)=1 $ and $ \gcd(N,5)=1 $. So, $ N $ must not be divisible by 4 or 5.</span></span></p>
+   <p style="margin:0 0 10px">#### Combining the conditions: $ \gcd(N,5)=1 $, $ \gcd(N,4)=1 $, $ \gcd(N,3)=1 $. So $ N $ must be <span class="box">coprime with 4, 3, and 5 — equivalent to coprime with 60, since lcm(4,3,5)=60</span> …</p>
+   <p style="margin:0">…the number of 5-digit numbers with digits in {0,1,2,3}, first digit ≠ 0, subtracting those divisible by 4 or 5 … (此处之后仍按错误口径计数)</p>
+  </div>
+  <div class="pnum">锚点(t* )约在片段前段;两个方框相距约 64 词元(后者为“+64 上下文”)。</div>
+ </div>
+
+ <div class="ann">
+   <div class="atag a1"><span class="dotag"></span>① 错误点(锚点) — 教师改写</div>
+   <div class="lead">学生错写(红字):排除 4 或 5 —— 这是 gcd(N,20)=1 的误读。</div>
+   <div class="pair">…$ \gcd(N,20)=1 $, which means $ N $ must not be divisible by <span class="wrong">4</span> or 5.</div>
+   <div class="lead" style="margin-top:8px">教师从同一前缀续写,第一句即改回:</div>
+   <div class="pair good">…$ \gcd(N,20)=1 $, which means $ N $ must not be divisible by <b style="color:var(--main)">2</b> or 5.<span class="okchip">续完 → 验证正确</span></div>
+   <div class="why">在错误刚发生处,教师能把“与 20 互素”重新读对(排除 2 而非 4),后续按正确口径计数。</div>
+ </div>
+
+ <div class="ann">
+   <div class="atag a2"><span class="dotag red"></span>② 距错误 64 词元 — 上下文 + 教师续写</div>
+   <div class="lead">此处学生已把整段推理建立在错误口径上(红框原文)。</div>
+   <div class="pair">教师自此状态续写:…All digits are in {0,1,2,3}. $ N $ is not divisible by 2, 3, <span class="wrong">4</span>, or 5. So $ N $ must be coprime with 60 (since lcm(15,20)=60)…</div>
+   <div class="why"><b>释义:</b>错误口径已被当作既定前提。教师只能顺着这段文本继续,把排除条件越搅越乱(2、3、4、5 全排除),计数仍错——越深,越难把错误“掰回”正确路径。此档救回率由锚点 40.6% 降至 18.8%。</div>
+ </div>
+</div>
+</div></body></html>

@@ -1,0 +1,62 @@
+--- a/verl/trainer/ppo/ray_trainer.py
++++ b/verl/trainer/ppo/ray_trainer.py
+@@ -1232,8 +1232,10 @@
+     def _compute_ref_log_prob(self, batch: DataProto) -> DataProto:
+         # step 1: convert dataproto to tensordict.
+         batch_td = batch.to_tensordict()
+-        # step 2: convert from padding to nopadding
+-        batch_td = left_right_2_no_padding(batch_td)
++        use_remove_padding = self.config.actor_rollout_ref.actor.get("use_remove_padding", True)
++        # step 2: convert from padding to nopadding when flash-attn is enabled.
++        if use_remove_padding:
++            batch_td = left_right_2_no_padding(batch_td)
++        else:
++            batch_td.set("loss_mask", batch_td["response_mask"])
+         # step 3: add meta info
+         metadata = {"calculate_entropy": False, "compute_loss": False}
+         if self.ref_in_actor:
+@@ -1245,8 +1247,9 @@
+             output = self.ref_policy_wg.compute_ref_log_prob(batch_td)
+         # gather output
+         log_probs = tu.get(output, "log_probs")
+-        # step 4. No padding to padding
+-        log_probs = no_padding_2_padding(log_probs, batch_td)
++        # step 4: restore padding only after a no-padding computation.
++        if use_remove_padding:
++            log_probs = no_padding_2_padding(log_probs, batch_td)
+         # step 5: rebuild a tensordict and convert to dataproto
+         ref_log_prob = tu.get_tensordict({"ref_log_prob": log_probs.float()})
+         ref_log_prob = DataProto.from_tensordict(ref_log_prob)
+@@ -1257,8 +1260,10 @@
+         # TODO: remove step 1, 2, 4 after we make the whole training tensordict and padding free
+         # step 1: convert dataproto to tensordict.
+         batch_td = batch.to_tensordict()
+-        # step 2: convert from padding to nopadding
+-        batch_td = left_right_2_no_padding(batch_td)
++        use_remove_padding = self.config.actor_rollout_ref.actor.get("use_remove_padding", True)
++        # step 2: convert from padding to nopadding when flash-attn is enabled.
++        if use_remove_padding:
++            batch_td = left_right_2_no_padding(batch_td)
++        else:
++            batch_td.set("loss_mask", batch_td["response_mask"])
+         # step 3: add meta info
+         calculate_sum_pi_squared = self.config.actor_rollout_ref.actor.get("calculate_sum_pi_squared", False)
+         tu.assign_non_tensor(
+@@ -1275,11 +1280,12 @@
+         sum_pi_squared = tu.get(output, "sum_pi_squared") if calculate_sum_pi_squared else None
+ 
+         old_log_prob_mfu = tu.get(output, "metrics")["mfu"]
+-        # step 4. No padding to padding
+-        entropy = no_padding_2_padding(entropy, batch_td)
+-        log_probs = no_padding_2_padding(log_probs, batch_td)
+-        if sum_pi_squared is not None:
+-            sum_pi_squared = no_padding_2_padding(sum_pi_squared, batch_td)
++        # step 4: restore padding only after a no-padding computation.
++        if use_remove_padding:
++            entropy = no_padding_2_padding(entropy, batch_td)
++            log_probs = no_padding_2_padding(log_probs, batch_td)
++            if sum_pi_squared is not None:
++                sum_pi_squared = no_padding_2_padding(sum_pi_squared, batch_td)
+         # step 5: rebuild a tensordict and convert to dataproto
+         result = {"old_log_probs": log_probs.float(), "entropys": entropy.float()}
+         if routed_experts is not None:

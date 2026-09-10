@@ -1,0 +1,23 @@
+{
+  "model": "models/stage2c_grpo240",
+  "data": "data/dapo-verl-v1/val.parquet",
+  "rows": 1024,
+  "correct": 321,
+  "accuracy": 0.3134765625,
+  "semantic_accuracy": 0.30859375,
+  "strict_contract_accuracy": 0.30859375,
+  "answer_parse_rate": 1.0,
+  "answer_marker_rate": 1.0,
+  "boxed_marker_rate": 0.681640625,
+  "closed_thinking_rate": 1.0,
+  "truncation_rate": 0.0068359375,
+  "response_length_mean": 1171.3056640625,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_new_tokens": 4096,
+    "seed": 42
+  },
+  "thinking": false
+}

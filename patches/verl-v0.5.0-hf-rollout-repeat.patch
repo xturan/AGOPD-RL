@@ -1,0 +1,12 @@
+--- a/verl/workers/rollout/hf_rollout.py
++++ b/verl/workers/rollout/hf_rollout.py
+@@ -87,7 +87,8 @@ class HFRollout(BaseRollout):
+                 "top_p": top_p,
+                 "top_k": top_k,
+                 "temperature": temperature,
+-                "num_return_sequences": self.config.n,
++                # ray_trainer already repeats each prompt rollout.n times.
++                "num_return_sequences": 1,
+             }
+ 
+         # make config according to generate mode

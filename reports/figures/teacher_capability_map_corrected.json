@@ -1,0 +1,32 @@
+[
+  {
+    "bucket": "Hard (p=0)",
+    "teacher": 13.8,
+    "student": 2.1,
+    "margin": 11.7
+  },
+  {
+    "bucket": "Low (p<0.25)",
+    "teacher": 41.9,
+    "student": 24.6,
+    "margin": 17.3
+  },
+  {
+    "bucket": "Mid (0.25-0.5)",
+    "teacher": 62.9,
+    "student": 44.8,
+    "margin": 18.1
+  },
+  {
+    "bucket": "High (0.5-0.75)",
+    "teacher": 79.6,
+    "student": 65.4,
+    "margin": 14.2
+  },
+  {
+    "bucket": "Easy (>=0.75)",
+    "teacher": 86.3,
+    "student": 81.7,
+    "margin": 4.6
+  }
+]

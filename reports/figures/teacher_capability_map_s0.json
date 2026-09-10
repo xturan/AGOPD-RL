@@ -1,0 +1,47 @@
+[
+ {
+  "bucket": "hard(p=0)",
+  "n": 60,
+  "p_S_base": 0.0,
+  "p_T": 0.06,
+  "p_S_grpo": 0.027,
+  "T_minus_Base": 0.06,
+  "T_minus_S": 0.033
+ },
+ {
+  "bucket": "p<.25",
+  "n": 60,
+  "p_S_base": 0.125,
+  "p_T": 0.208,
+  "p_S_grpo": 0.152,
+  "T_minus_Base": 0.083,
+  "T_minus_S": 0.056
+ },
+ {
+  "bucket": ".25-.5",
+  "n": 60,
+  "p_S_base": 0.298,
+  "p_T": 0.317,
+  "p_S_grpo": 0.302,
+  "T_minus_Base": 0.019,
+  "T_minus_S": 0.015
+ },
+ {
+  "bucket": ".5-.75",
+  "n": 60,
+  "p_S_base": 0.556,
+  "p_T": 0.515,
+  "p_S_grpo": 0.575,
+  "T_minus_Base": -0.042,
+  "T_minus_S": -0.06
+ },
+ {
+  "bucket": "easy(>.75)",
+  "n": 60,
+  "p_S_base": 0.86,
+  "p_T": 0.602,
+  "p_S_grpo": 0.76,
+  "T_minus_Base": -0.258,
+  "T_minus_S": -0.158
+ }
+]

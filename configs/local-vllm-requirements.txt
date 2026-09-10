@@ -1,0 +1,29 @@
+# Runtime packages for the local two-GPU mirror of the cloud vLLM environment.
+# The torch/vLLM/verl versions are constrained by local-vllm-constraints.txt.
+accelerate
+codetiming
+cupy-cuda12x==13.3.0
+datasets
+dill
+fastapi
+hydra-core
+latex2sympy2_extended
+math-verify
+omegaconf
+opencv-python-headless==4.11.0.86
+pandas
+peft
+pyarrow
+pybind11
+pylatexenc
+ray[data,train,tune]
+regex
+safetensors
+scipy==1.15.2
+tensorboard
+torchdata
+transformers==4.55.4
+tensordict==0.9.1
+uvicorn
+vllm==0.10.2
+wandb

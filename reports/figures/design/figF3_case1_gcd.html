@@ -1,0 +1,251 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><title>F3_case1_gcd</title>
+<style>
+:root{--red:#9c4b50;--main:#155b66;--mut:#6f7779;--ink:#263439;--grey:#f3f4f2;--line:#dfe2e0}*{box-sizing:border-box;margin:0}
+body{background:#fff;color:var(--ink);font-family:Georgia,"Times New Roman","PingFang SC",serif;padding:22px 26px}
+.slide{max-width:1180px;margin:0 auto}
+.eyebrow{font:600 12px/1 Helvetica,Arial,sans-serif;letter-spacing:.24em;color:var(--main);text-transform:uppercase}
+h1{font-size:23px;margin:6px 0 2px}.sub{font-size:13px;color:var(--mut);margin:2px 0 12px}
+.grey{background:var(--grey);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0}
+.gtag{font:600 11px/1 Helvetica,Arial,sans-serif;letter-spacing:.1em;color:var(--mut);text-transform:uppercase}
+pre{white-space:pre-wrap;font-size:12.5px;line-height:1.62;color:#3a4448;margin-top:6px;word-break:break-word}
+mark.w1{background:#f6e0de;color:#8a2b30;padding:0 2px;border-radius:2px}mark.w2{background:#f2dde8;color:#743052;padding:0 2px;border-radius:2px}
+.pos{margin:14px 0 4px}.phead{display:flex;gap:10px;align-items:baseline;margin:6px 0}.phead b{font-size:15px}.off{font:11px Helvetica;color:var(--mut)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.blk{border:1px solid var(--line);border-left-width:4px;padding:9px 12px;border-radius:6px}
+.blk.red{border-left-color:var(--red)}.blk.teal{border-left-color:var(--main)}
+.blab{font:600 11px/1 Helvetica,Arial,sans-serif;letter-spacing:.05em;margin-bottom:6px}
+.blk.red .blab{color:var(--red)}.blk.teal .blab{color:var(--main)}
+.btxt{white-space:pre-wrap;font-size:12.5px;line-height:1.6;word-break:break-word}
+b.red{color:var(--red);background:#fbe6e4;padding:0 1px}b.teal{color:var(--main);background:#e4f0f0;padding:0 1px;font-weight:700}
+.note{font-size:12px;color:var(--mut);margin-top:4px;line-height:1.6}.note b{color:var(--ink)}
+.legend{font-size:11.5px;color:var(--mut);margin:4px 0}.legend i{display:inline-block;width:11px;height:11px;border-radius:2px;margin:0 3px 0 8px;vertical-align:-1px}
+@media(max-width:900px){.pair{grid-template-columns:1fr}}
+.btxt .cut{color:#a59;font-style:italic;font-size:11px}</style></head><body><div class="slide">
+<div class="eyebrow">Appendix F · F.3 示例</div>
+<h1>Case 1 · gcd(N,15)=gcd(N,20)=1</h1>
+<div class="sub">灰底=学生错误轨迹的完整步骤(去重清洗)。红块①=错误起点;紫块②=+64 状态。每观测点两栏:红=已错前缀续写全文,青=同题正确前缀对照续写全文(样本原样展示,不截短)。</div>
+<div class="grey"><span class="gtag">学生错误轨迹 · 完整步骤(清洗)</span>
+<div class="legend"><i style="background:#f6e0de"></i>① 错误起点<i style="background:#f2dde8"></i>② +64 状态</div>
+<pre>#### Condition 3: gcd(N, 20) = 1
+This means N must be coprime with 20.
+- gcd(N, 20) = 1 ⇒ gcd(N, 4) = 1 and gcd(N, 5) = 1
+<mark class="w1">So, N must not be divisible by 4 or 5.</mark>
+<mark class="w2">#### Combining the conditions:</mark>
+- gcd(N, 5) = 1 (from both 15 and 20)
+- gcd(N, 4) = 1
+- gcd(N, 3) = 1
+So, N must be coprime with 4, 3, and 5.
+<mark class="w2">This is equivalent to saying N must be coprime with 60 (since lcm(4, 3, 5) = 60 ).</mark></pre></div>
+<div class="pos"><div class="phead"><b>位置 A · 错误起点 t*</b><span class="off">表 F2 锚点行</span></div>
+<div class="pair"><div class="blk red"><div class="blab">教师续写 · 已错前缀</div><div class="btxt">gcd(N, 20) = 1 , which means N must not be divisible by 2 <b class="teal">or 5</b>.
+4. N is a 5-digit number (i.e., between 10000 and 99999), and the leading digit cannot be zero.
+Let’s break this down step by step.
+---
+### Step 1: Total number of 5-digit numbers with digits ≤ 3
+We are looking for 5-digit numbers where each digit is in the set 0, 1, 2, 3, but the first digit cannot be 0.
+- First digit: 3 choices (1, 2, 3)
+- Remaining 4 digits: 4 choices each (0, 1, 2, 3)
+So the total number of such numbers is:
+3 × 4^4 = 3 × 256 = 768
+---
+### Step 2: Eliminate numbers divisible by 2 or 5
+We are told that gcd(N, 20) = 1 , so N must not be divisible by 2 or 5.
+So we must exclude numbers divisible by 2 or 5.
+We will use the inclusion-exclusion principle to count how many of the 768 numbers are divisible by 2 or 5.
+#### Count of numbers divisible by 2:
+A number is divisible by 2 if its last digit is even (0, 2).
+- First digit: 3 choices (1, 2, 3)
+- Last digit: 2 choices (0, 2)
+- Middle 3 digits: 4 choices each
+So total numbers divisible by 2:
+3 × 4^3 × 2 = 3 × 64 × 2 = 384
+#### Count of numbers divisible by 5:
+A number is divisible by 5 if its last digit is 0 or 5. But we are only allowing digits ≤ 3, so only 0 is allowed.
+- First digit: 3 choices (1, 2, 3)
+- Last digit: 1 choice (0)
+- Middle 3 digits: 4 choices each
+So total numbers divisible by 5:
+3 × 4^3 × 1 = 3 × 64 = 192
+#### Count of numbers divisible by both 2 and 5 (i.e., 10):
+A number divisible by 10 must end in 0 and be even (which it is, since it ends in 0).
+- First digit: 3 choices (1, 2, 3)
+- Last digit: 1 choice (0)
+- Middle 3 digits: 4 choices each
+So total numbers divisible by 10:
+3 × 4^3 = 3 × 64 = 192
+#### Use inclusion-exclusion to find numbers divisible by 2 or 5:
+Divisible by 2 or 5 = 384 + 192 - 192 = 384
+So, the number of numbers not divisible by 2 or 5 is:
+768 - 384 = 384
+---
+### Step 3: Eliminate numbers divisible by 3
+We are told that gcd(N, 15) = 1 , so N must not be divisible by 3 or 5. Since we already excluded numbers divisible by 5, we now only need to exclude numbers divisible by 3.
+We need to count how many of the 384 numbers are divisible by 3.
+A number is divisible by 3 if the sum of its digits is divisible by 3.
+We are considering all 5-digit numbers with digits in 0, 1, 2, 3 and first digit not zero.
+We can use the fact that the number of such numbers where the sum of digits is divisible by 3 is exactly one-third of the total (since the possible digit sums modulo 3 are evenly distributed).
+So, of the 384 numbers not divisible by 2 or 5, one-third are divisible by 3.
+3843 = 128
+So, the number of numbers not divisible by 2, 3, or 5 is:
+384 - 128 = 256
+---
+### Final Answer:
+256</div></div><div class="blk teal"><div class="blab">教师续写 · 同题正确前缀(对照)</div><div class="btxt">all digits of N must be in the set 0, 1, 2, 3 , and the first digit cannot be 0 (since N is a 5-digit number).
+So, the first digit has 3 choices: 1, 2, 3
+Each of the remaining 4 digits has 4 choices: 0, 1, 2, 3
+So, the total number of 5-digit numbers with digits no greater than 3 is:
+3 × 4^4 = 3 × 256 = 768
+---
+### Step 2: Apply the gcd conditions
+We need to find the numbers N such that:
+gcd(N, 15) = 1 and gcd(N, 20) = 1
+We can simplify this by noting that:
+gcd(N, 15) = 1 ⇒ N is not divisible by 3 <b class="teal">or 5</b>
+gcd(N, 20) = 1 ⇒ N is not divisible by 2 or 5
+So, combining these, we get that N must not be divisible by 2, 3, or 5.
+Thus, we need to count the number of 5-digit numbers with digits in 0, 1, 2, 3 , first digit not 0, and not divisible by 2, 3, or 5.
+---
+### Step 3: Use inclusion-exclusion
+We count the total number of such numbers, and subtract those divisible by 2, 3, or 5.
+Let’s define the set of all such 5-digit numbers with digits ≤ 3 and first digit ≠ 0: S = 768 , as calculated above.
+Let:
+- A : numbers divisible by 2
+- B : numbers divisible by 3
+- C : numbers divisible by 5
+We want to count |S (A B C)| , which is:
+|S| - |A| - |B| - |C| + |A B| + |A C| + |B C| - |A B C|
+We now compute each of these.
+---
+### Step 4: Count numbers divisible by 2
+A number is divisible by 2 if its last digit is even.
+Digits allowed are 0, 1, 2, 3 , so even digits are 0, 2 .
+So, last digit has 2 choices.
+First digit: 3 choices (1, 2, 3)
+Middle 3 digits: 4 choices each
+So, total numbers divisible by 2:
+3 × 4^3 × 2 = 3 × 64 × 2 = 384
+---
+### Step 5: Count numbers divisible by 3
+A number is divisible by 3 if the sum of its digits is divisible by 3.
+We count how many of the 768 numbers have digit sums divisible by 3.
+This is more complex, but we can use the fact that the total number of such numbers is 7683 = 256 , assuming uniform distribution (which is true because digits are chosen from a uniform set and the total is divisible by 3).
+So, |B| = 256
+---
+### Step 6: Count numbers divisible by 5
+A number is divisible by 5 if its last digit is 0 or 5.
+But digits allowed are only 0, 1, 2, 3 , so only 0 is allowed.
+So, last digit must be 0.
+First digit: 3 choices
+Middle 3 digits: 4 choices each
+Last digit: 1 choice (0)
+So, total numbers divisible by 5:
+3 × 4^3 × 1 = 3 × 64 = 192
+---
+### Step 7: Count numbers divisible by 2 and 3
+These are numbers divisible by 6.
+We count how many of the 768 numbers are divisible by 6.
+Since 6 = 2 × 3, and 2 and 3 are coprime, the numbers divisible by 6 are those divisible by both 2 and 3.
+We<span class="cut">…(语料至此截断)</span></div></div></div>
+<div class="note"><b>差异:</b>已错前缀一侧第一句即把 4 改回 2,按正确口径继续并收尾 256;对照侧同一句一致,救回差距小。</div></div>
+<div class="pos"><div class="phead"><b>位置 B · t* + 64 词元</b><span class="off">表 F2 +64 行</span></div>
+<div class="pair"><div class="blk red"><div class="blab">教师续写 · 已错前缀</div><div class="btxt">that:
+- All digits are in 0, 1, 2, 3.
+- N is <b class="red">not divisible by 2, 3, 4, or 5</b>.
+- The first digit is not 0.
+So, N must be coprime with 60 (since gcd(N, 60) = 1 ), because lcm(15, 20) = 60 .
+But we can check divisibility conditions directly.
+---
+### Step 2: Count all 5-digit numbers with digits ≤ 3
+We are to count all 5-digit numbers where each digit is in 0, 1, 2, 3 and the first digit is not 0.
+- First digit: 1, 2, or 3 → 3 choices.
+- Remaining 4 digits: 0, 1, 2, or 3 → 4 choices each.
+So, total such numbers = 3 × 4^4 = 3 × 256 = 768 .
+---
+### Step 3: Exclude numbers divisible by 2, 3, 4, or 5
+We need to count how many of these 768 numbers are not divisible by 2, 3, 4, or 5.
+We use the inclusion-exclusion principle to count how many numbers are divisible by at least one of these, and subtract that from 768.
+Let’s define:
+- A : numbers divisible by 2
+- B : numbers divisible by 3
+- C : numbers divisible by 4
+- D : numbers divisible by 5
+We need to find |A B C D| , and subtract it from 768.
+We will calculate the number of such numbers divisible by each of the divisors, and their intersections.
+---
+### Step 4: Count numbers divisible by each divisor
+We will count how many of the 768 numbers are divisible by 2, 3, 4, or 5.
+#### Divisible by 2:
+A number is divisible by 2 if its last digit is even (0, 2).
+- First digit: 1, 2, or 3 → 3 choices
+- Last digit: 0 or 2 → 2 choices
+- Middle digits: 0, 1, 2, 3 → 4 choices each
+So, numbers divisible by 2:
+3 × 4^3 × 2 = 3 × 64 × 2 = 384
+#### Divisible by 3:
+A number is divisible by 3 if the sum of its digits is divisible by 3.
+We can count this by checking all 768 numbers and counting how many have digit sums divisible by 3.
+But it's easier to compute the number of such numbers using modular arithmetic.
+Each digit is 0, 1, 2, or 3. So, the total number of 5-digit numbers with digits ≤ 3 is 768.
+We can use the fact that the number of such numbers with digit sum divisible by 3 is approximately 13 of the total, because the digits are evenly distributed modulo 3.
+So, numbers divisible by 3: 7683 = 256
+#### Divisible by 4:
+A number is divisible by 4 if its last two digits form a number divisible by 4.
+We can count this by considering all possible last two digits (from 00 to 33) that are divisible by 4, and for each, count the number of combinations for the first 3 digits.
+There are 16 possible two-digit combinations (from 00 to 33), and only 4 of them are divisible by 4: 00, 04, 08, 12, 16, 20, 24, 28, 32, 36 → but only those ≤ 33 are valid.
+Valid two-digit combinations divisible by 4: 00, 04, 08, 12, 16, 20, 24, 28, 32 → 9 combinations.
+So, numbers divisible by 4:
+3 × 4^2 × 9 = 3 × 16 × 9 = 432
+#### Divisible by 5:
+A number is divisible by 5 if its last digit is 0 or 5. Since digits can only be 0<span class="cut">…(语料至此截断)</span></div></div><div class="blk teal"><div class="blab">教师续写 · 同题正确前缀(对照)</div><div class="btxt">means N must not be divisible by any of the prime factors of 15, which are 3 and 5.
+So, N must not be divisible by 3 <b class="teal">or 5</b>.
+#### Condition 3: gcd(N, 20) = 1
+This means N must not be divisible by any of the prime factors of 20, which are 2 and 5.
+So, N must not be divisible by 2 or 5.
+Combining conditions 2 and 3, N must not be divisible by 2, 3, or 5.
+So, the number N must be coprime with 30 (since lcm(15, 20) = 60 , and the gcd condition implies gcd(N, 30) = 1 ).
+Thus, we are looking for 5-digit numbers N with digits in 0, 1, 2, 3, first digit not zero, and gcd(N, 30) = 1 .
+---
+### Step 2: Count all 5-digit numbers with digits in 0, 1, 2, 3, first digit not zero
+We count the number of such numbers:
+- The first digit: 3 choices (1, 2, 3)
+- The remaining 4 digits: 4 choices each (0, 1, 2, 3)
+So, total such numbers = 3 × 4^4 = 3 × 256 = 768
+---
+### Step 3: Remove numbers divisible by 2, 3, or 5
+We need to count how many of these 768 numbers are not divisible by 2, 3, or 5.
+This is a classic inclusion-exclusion problem.
+Let’s define:
+- A : numbers divisible by 2
+- B : numbers divisible by 3
+- C : numbers divisible by 5
+We want to count the numbers not in A B C , i.e., numbers not divisible by 2, 3, or 5.
+So we compute:
+Valid numbers = Total numbers - |A B C|
+Using inclusion-exclusion:
+|A B C| = |A| + |B| + |C| - |A B| - |A C| - |B C| + |A B C|
+We now compute each term.
+---
+### Step 4: Count numbers divisible by 2
+A number is divisible by 2 if its last digit is even: 0, 2
+So, among the 4 choices for each digit (0, 1, 2, 3), 2 are even.
+Thus, the number of 5-digit numbers with digits in 0, 1, 2, 3, first digit not zero, and last digit even is:
+- First digit: 3 choices
+- 3 middle digits: 4 choices each
+- Last digit: 2 choices (0, 2)
+So, |A| = 3 × 4^3 × 2 = 3 × 64 × 2 = 384
+---
+### Step 5: Count numbers divisible by 3
+A number is divisible by 3 if the sum of its digits is divisible by 3.
+Let’s count how many of the 768 numbers have digit sums divisible by 3.
+This is more complex, but we can use modular arithmetic.
+Each digit can be 0, 1, 2, or 3. Let’s denote the digits as d_1, d_2, d_3, d_4, d_5 , where d_1 1, 2, 3 , and the rest d_i 0, 1, 2, 3 .
+Let’s compute the total number of such 5-digit numbers with digit sum divisible by 3.
+This is a standard problem in combinatorics. The total number of such numbers is:
+13 × Total numbers = 13 × 768 = 256
+So, |B| = 256
+---
+### Step 6: Count numbers divisible by 5
+A number is divisible by 5 if its last digit is 0 or 5.
+But our<span class="cut">…(语料至此截断)</span></div></div></div>
+<div class="note"><b>差异与判读:</b>深入 64 词元后,已错前缀一侧把约束写成“2、3、4、5 全排除”并称 gcd(N,60)=1;对照侧仍按只排除 2、3、5。错误惯性带偏后续,教师救不回。</div></div>
+</div></body></html>

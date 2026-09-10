@@ -1,0 +1,13 @@
+{
+  "model": "models/Qwen3-1.7B-sft-openr1-8k",
+  "data": "data/dapo-verl-v1/val.parquet",
+  "rows": 1024,
+  "correct": 88,
+  "accuracy": 0.0859375,
+  "answer_marker_rate": 0.8564453125,
+  "boxed_marker_rate": 0.5546875,
+  "closed_thinking_rate": 1.0,
+  "truncation_rate": 0.146484375,
+  "response_length_mean": 825.14453125,
+  "sampling": {"temperature": 0.6, "top_p": 0.95, "top_k": 20, "max_new_tokens": 2048, "seed": 42}
+}

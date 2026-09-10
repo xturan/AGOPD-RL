@@ -1,0 +1,23 @@
+{
+  "model": "${AGOPD_ROOT}/models/Qwen3-4B-grpo-50step-ckpt2",
+  "data": "${AGOPD_ROOT}/data/dapo-verl-v1/val.parquet",
+  "rows": 1024,
+  "correct": 412,
+  "accuracy": 0.40234375,
+  "semantic_accuracy": 0.40234375,
+  "strict_contract_accuracy": 0.287109375,
+  "answer_parse_rate": 0.8291015625,
+  "answer_marker_rate": 0.5615234375,
+  "boxed_marker_rate": 0.333984375,
+  "closed_thinking_rate": 1.0,
+  "truncation_rate": 0.1708984375,
+  "response_length_mean": 1171.90625,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_new_tokens": 2048,
+    "seed": 42
+  },
+  "thinking": false
+}

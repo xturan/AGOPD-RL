@@ -1,0 +1,11 @@
+{
+  "protocol": "FULL clean chat-template census, 16,164 DAPO train prompts x n=8, no-think, T=0.6/.95/20, 2048, rule-verifier strict. Replaces the A1 89.17% figure (which came from a dirty str(list)-wrapped prompt census and is invalid).",
+  "n_prompts": 16164,
+  "p0": 0.48905,
+  "p0_ci": [0.48134, 0.49676],
+  "mean_p": 0.2317,
+  "S4": 0.3006, "S6": 0.3601, "S8": 0.3939,
+  "hist_k8": {"0":7905,"1":2097,"2":1383,"3":985,"4":928,"5":809,"6":694,"7":684,"8":679},
+  "artifacts": "outputs/census_17_full/shard*.jsonl",
+  "a1_old_claim": {"p0":0.8917,"mean_p":0.0235,"hist0":14413}
+}

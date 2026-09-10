@@ -1,0 +1,1502 @@
+[
+  {
+    "idx": "7fbf9326-c6fb-4c6c-a58d-6988baad4f08",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "775cd03a-13cd-4dc9-ba03-27c7c33d0596",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "cfebae23-1716-48aa-a1e2-bcaa2a10f0ab",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "4ab7bb06-89d8-45ed-8238-eb54cb9e2294",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "d620215a-0db2-43cc-9fc5-4131daa32cc0",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "c0c8b036-9be9-4ea6-bf0c-a93d68f63159",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "e877fd8b-7b52-430f-bcb7-d6fb497185ad",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "b4c88dfe-6725-4041-864e-dd54463b7dce",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "32b253b5-c4a6-45a7-842e-3cd3becf0f32",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "d5a17182-b7df-4620-b9e1-ada7eefa3336",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "cdc9cd97-d75e-46ae-9043-48e39eb87cc7",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "17a20426-999d-4b7c-b5a4-e86321a79076",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "2934cb84-fa0a-4ce3-ab67-9891e91ef817",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "dc184d5f-25ca-4da2-bcde-f5a79ec0e4cf",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "392e1e62-a968-4069-83bc-cc632fe9d1be",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "e928b70e-f40c-426d-95be-adbb3cf968ce",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "4aec9727-61c8-43f8-957d-c3f1a2619f15",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "09d265df-334b-48bf-8921-5ce757f6a276",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "45a96338-f6c2-4187-a320-5fa311f459ca",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "99b4a303-0c5a-494e-9fd4-e4d30a5729d6",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "6f87895c-7234-440a-9718-4c12506d3bb2",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "9e57832d-9116-460a-b355-f58bd058289f",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "f7c0ed4b-6b78-4c88-863d-74960f5df2a3",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "1fc5ab01-1205-46de-b907-1e737385bc00",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "b2565e50-c9d7-4d89-ad6c-9b45b5991743",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "cc7bcbba-8f48-4973-845e-cf514dd94c40",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "fbbdabf3-3124-4398-93fe-2fe51dcc0b47",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "823c7ba3-802e-46c8-af6a-7a056de1495a",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "7215180b-759e-41e9-a371-81c0c16a3ce2",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "726bc673-305d-4381-9da2-28ebed210b8a",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "10d9b709-b341-4c14-ab5f-2a05c2b57682",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "cdb366de-7283-4f5e-b79d-5f853f7cf542",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "0f6bd92d-be15-4452-b11b-1dd98c7b2e4f",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "7fc608d0-112d-4332-bf65-3c507c39549b",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "ad7a36b5-ab52-4471-ae4e-1517ffababe5",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "030f3ead-93c1-4dd2-9557-e9445f35f109",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "b74bb499-d609-4d1c-8b22-79c70e51f110",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "bcdfd731-b3bb-4f5a-b775-a97e88c908b6",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "e8133032-054e-42bf-b65c-1366fa0208f6",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "86522992-fd16-4dd5-a2a5-3bb7ad3e5984",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "af7e2875-be99-430d-b118-5225e6d575fa",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "04b59d01-0ef5-41cc-938e-3105ce23713a",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "448b9325-d55c-4d0a-bbfc-0b5058303804",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "e6543411-c59c-44a3-a600-a0424767bd70",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "63354242-3ffc-4940-b994-60428a92c426",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "94041c23-bd7c-4e1c-97cb-80c4f7c44096",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "0b0157b3-1875-4860-90c0-59dd451fe646",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "57b5179d-951f-498d-84a7-4e683abe88d4",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "085231ce-6743-4450-bdd0-38f5f364c4c9",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "fbf9d71d-e661-4ab2-9ea6-f32c2f714e09",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "84e019b2-a752-4e55-93b4-e6579ddd5a48",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "0da468b7-11a9-40a8-b3ed-34fbb7d3b11d",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "9acd4f36-6578-49f7-8854-81b46d4c8fb9",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "e378d97c-b7e6-4c23-b34f-f666b463c11b",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "3e0605ee-729d-4fcd-8617-5a0a1d97bbb5",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "9a90384c-df01-4cf3-9e41-a6c9b6450ac6",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "4cd58260-6eec-42c1-aa55-a8f83d34aebe",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "81dcce93-1e21-4856-b92a-d3980d68eeb1",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "655e1854-5357-4544-bc38-543be007e230",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "5b3f9e18-0278-4ade-ba91-f2c40b1207b3",
+    "bucket": "hard(p=0)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "94d914f3-99f6-48a8-b067-1e852be67ec1",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "0eae7d97-cf06-4223-b3fe-7c992935b0bc",
+    "bucket": "p<.25",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "8a2cf744-616a-45f2-a286-1c8f5ac939af",
+    "bucket": "p<.25",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "2104e67f-6528-4763-9730-19166ba40ada",
+    "bucket": "p<.25",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "e9441dbe-378a-4638-9aad-20209e57efef",
+    "bucket": "p<.25",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "34d12d8d-4f52-480c-bea8-c0fce73e52ee",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "e0d4134f-9b1b-461c-842a-eca92890da5d",
+    "bucket": "p<.25",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "d7005fa9-7dc3-4a6b-8a7c-956ddec41b73",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "a8324853-2563-405c-8dc9-ef223b3c6c7b",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "8bc92ba9-19e9-4171-a846-b23b769a2416",
+    "bucket": "p<.25",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "261976fd-0963-4a43-a854-93e55a1fa9f7",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "ca4093b6-fde3-4845-afa0-be9d25116c72",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "b2ce0b43-fc47-455a-9eff-4230cdfe63ad",
+    "bucket": "p<.25",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "b15c340f-14da-4681-8afe-0a635a893466",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "6f2c4c6c-58af-48eb-8e4d-724f9b9e0f41",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "1d7f82fa-044a-4f95-b91d-062121eb5fbe",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "edfd98d0-18f7-443d-b578-9b8eea4a9a79",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "6e77c50b-e0a2-44f1-802c-7916796d9a2e",
+    "bucket": "p<.25",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "3f8af685-d342-4529-bf12-a9a5d3d0f86d",
+    "bucket": "p<.25",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "9c7a1b12-f077-4294-98c6-bbb9c2df6166",
+    "bucket": "p<.25",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "e6c453c8-d43f-4765-b397-9a792fcc3539",
+    "bucket": "p<.25",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "1a39b1dd-0f3e-48b0-b096-0e5da0a25824",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "d21f7acb-75f2-4af2-9678-c6acc2df6994",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "2eb82fde-325b-4a68-97b5-d9a8b81591ef",
+    "bucket": "p<.25",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "90b33412-2051-40ac-bd2c-4dc8610b80c5",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "11384df2-0f87-4a3c-866c-9b4dfce9dda9",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "3fa5dd7f-22e1-4e9b-a158-ad08686cf480",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "0f5fa4c9-43c3-4ecf-aee6-f6de75614bdd",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "26f22743-2de1-4aa4-afd1-b89f0ee28e6e",
+    "bucket": "p<.25",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "b84c1e75-4307-4673-97ef-ce0ef945c9e4",
+    "bucket": "p<.25",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "5a8b5f4f-ee66-4813-959a-078ce00ad0cb",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "e7206467-c133-43f7-82ef-6fa018da7089",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "a57c7be5-07ff-48ef-b11c-576b968ba3e4",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "f3d20096-42a6-416d-a935-2a796b644159",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "aa9c43a8-cafd-4909-917c-d59e3361b3d2",
+    "bucket": "p<.25",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "28f048ac-bfce-4098-8f0a-bbb65e1eacaf",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "39393da5-7d6d-4022-b5c7-bb6d164d925b",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "e45ffdc6-ced3-447e-b971-a2f5dfd277b4",
+    "bucket": "p<.25",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "8a86e67c-61be-41ce-a224-45077ab23e8a",
+    "bucket": "p<.25",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "38c2111c-f94d-4717-a26c-a2548fbb8158",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "b7de1c96-9bce-4c71-b3ee-fa1c22aa98e6",
+    "bucket": "p<.25",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "87c2bf19-841d-4598-ad2c-4415301880ce",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "8c3f743a-f064-4338-9b51-6e417952b854",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "7af96166-20b8-4c9f-b406-df0e0aacdadd",
+    "bucket": "p<.25",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "2fd328a4-5568-49dd-9c9d-87e739ad186d",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "1e8a24eb-324a-4c62-b656-e9652541525d",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "9c982f7d-fe9e-4c23-b502-58c98a0b76bf",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "1563e5c0-11f5-4a9e-ad42-a695611fe1e9",
+    "bucket": "p<.25",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "6ae72f24-2047-44ef-befc-08c237039098",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "6a32bb9f-0051-4021-803a-52106f3fd173",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "c78912e8-d948-4aaa-b1d7-2d48be77ccaa",
+    "bucket": "p<.25",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "5f414a9a-7aab-4417-a43a-bcd8205dec29",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "96777be7-393d-4b22-80a2-23867308f56a",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "a584cc6e-d462-436d-ba26-54afecd07936",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "c292c264-d4c7-44e0-83f4-dfab63c1ab92",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "a8d62cdc-f0e8-44dc-9614-9fc042ffe036",
+    "bucket": "p<.25",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "fbf32fcf-32ad-4f44-b16e-c07cd125f006",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "5df259da-76a0-4c4c-b568-88b29e734535",
+    "bucket": "p<.25",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "3f2e0028-64bc-4585-945c-4ffe45e4abb3",
+    "bucket": "p<.25",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "d9e43a07-5493-4eff-a595-5aa1edbefad3",
+    "bucket": "p<.25",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "ad262150-b38f-4aac-8dc0-2734ea9ea9c6",
+    "bucket": ".25-.5",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "d1ec3fc0-9d61-45be-bb25-32bd027ed24a",
+    "bucket": ".25-.5",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "84501b44-688d-4518-be16-d188f0a0e8d3",
+    "bucket": ".25-.5",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "1161fdfd-846b-45cf-9915-4ab1a82dd98f",
+    "bucket": ".25-.5",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "727158ed-aec4-4bef-a014-c006c3964b3a",
+    "bucket": ".25-.5",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "747bba32-4809-46fd-a625-9bf95895d2c3",
+    "bucket": ".25-.5",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "30de0ded-f497-4405-8632-df2d93804756",
+    "bucket": ".25-.5",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "898a9578-36af-46b9-a62d-57f482d89bdc",
+    "bucket": ".25-.5",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "893048e2-7268-4ae2-b6cb-411e13eb5bcb",
+    "bucket": ".25-.5",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "d73ba4fd-fdbc-4b46-990a-5084f3b71821",
+    "bucket": ".25-.5",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "9787c14e-2c0c-4b67-a5c9-6141a63e7eff",
+    "bucket": ".25-.5",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "581ef6f4-e643-4562-a650-4d42f7bd5898",
+    "bucket": ".25-.5",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "d6913deb-8b96-46a1-9a03-d418ca8d81c6",
+    "bucket": ".25-.5",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "bb0caa3c-e6f4-4fc7-8d83-974ac77ca4a0",
+    "bucket": ".25-.5",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "615e7aa8-b0ce-412c-a708-f0e884d29591",
+    "bucket": ".25-.5",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "892c2cc7-a76a-4a58-bc20-83d5ec26f4fb",
+    "bucket": ".25-.5",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "15a8364b-85d0-402b-b84a-9e4bbbb4e0f9",
+    "bucket": ".25-.5",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "20d746d1-175d-4cc9-a967-e25637c15362",
+    "bucket": ".25-.5",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "61b6424a-23fb-45a8-9b03-d57d10ad1b36",
+    "bucket": ".25-.5",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "e30e8fe9-2b34-4c3d-83c2-20ee2cb7bf1d",
+    "bucket": ".25-.5",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "ff9278ae-fa0b-4bb5-9021-0859e19a006c",
+    "bucket": ".25-.5",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "f42f7435-42a0-4f76-9105-7a46c8bd6f12",
+    "bucket": ".25-.5",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "330bd6d9-4c80-45d0-aba7-bc8c6ad12e1a",
+    "bucket": ".25-.5",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "84d7676e-1410-42d1-a009-8a481fa2eaf5",
+    "bucket": ".25-.5",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "2c6b4a83-915d-4558-bafc-6283eb2e48f6",
+    "bucket": ".25-.5",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "67c971a3-09d3-4635-a39e-920fcde2500e",
+    "bucket": ".25-.5",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "53a3c1af-74a7-415e-b091-88717ea38764",
+    "bucket": ".25-.5",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "b8ad1678-b1af-4d84-a151-211865127861",
+    "bucket": ".25-.5",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "cf62a9c2-b63a-4fd9-b436-a9bd47de5240",
+    "bucket": ".25-.5",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "c14cc34f-b4f5-4686-9a7b-0ef17a5b7f4c",
+    "bucket": ".25-.5",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "3e7d49de-d2eb-4ac9-949d-1f1d6201ade8",
+    "bucket": ".25-.5",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "472e388a-b810-4085-aa7d-dbff8ea30c65",
+    "bucket": ".25-.5",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "e108f1fc-f45d-471a-88e8-df68da078180",
+    "bucket": ".25-.5",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "99866edf-df57-4e7e-9bb5-b2fd2a1f87c7",
+    "bucket": ".25-.5",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "d697308b-6152-468a-a86e-24702246842d",
+    "bucket": ".25-.5",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "9d15fd8d-297e-4aa0-a240-4343c606f895",
+    "bucket": ".25-.5",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "1afae752-f613-4cf9-8aaa-482af576d145",
+    "bucket": ".25-.5",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "bf787a13-f39b-4d64-bcf2-c51158977826",
+    "bucket": ".25-.5",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "fee4b142-f611-42c9-af7f-12f7e8ec993e",
+    "bucket": ".25-.5",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "77a83369-9b69-4d41-ad64-229402af0726",
+    "bucket": ".25-.5",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "b51f0b45-4e8a-487d-b400-cd805add120d",
+    "bucket": ".25-.5",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "a924c42e-4942-4220-a85e-7d9d6aa84e74",
+    "bucket": ".25-.5",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "c8621c82-f0c5-42a8-946e-c06fd150a4c9",
+    "bucket": ".25-.5",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "6d208f3f-65e3-4fe7-b52d-12e2b0f34fbd",
+    "bucket": ".25-.5",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "2e6b09d5-3298-4c76-afd0-4f774d1fb2d3",
+    "bucket": ".25-.5",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "39fd0404-f3df-4adb-9cba-006f00cc3420",
+    "bucket": ".25-.5",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "82117763-548c-4761-9874-6529ca0abc3e",
+    "bucket": ".25-.5",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "90e430ba-222b-4ad0-b555-b0bcf63d0679",
+    "bucket": ".25-.5",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "68b41153-05f4-4e94-890d-7d52fb2c1821",
+    "bucket": ".25-.5",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "d2ff620c-03cf-41ca-94a8-f88d2d98eccf",
+    "bucket": ".25-.5",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "cb08fad6-f3ea-48b3-b679-58a2f164a786",
+    "bucket": ".25-.5",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "73a92850-6818-4397-af97-14910c217461",
+    "bucket": ".25-.5",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "8478d1c8-8d0c-4edb-8a19-3b9028ab67b3",
+    "bucket": ".25-.5",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "fc949e19-acaf-4f30-b117-43f8773c8851",
+    "bucket": ".25-.5",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "1ede3ad9-30f3-4322-a34f-f3bbbe0ef4fa",
+    "bucket": ".25-.5",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "3381808b-fb0e-4d7d-a42f-1da3561e2f2d",
+    "bucket": ".25-.5",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "2fa35708-19ed-42a1-9f04-d3ef3eca9359",
+    "bucket": ".25-.5",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "4fa0d1e0-239a-4541-839e-08bcd46f33a2",
+    "bucket": ".25-.5",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "800d8bb4-7305-4965-bfd7-c633eeee5dd0",
+    "bucket": ".25-.5",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "74d15b2b-6b53-4b8c-a9db-41a81736c308",
+    "bucket": ".25-.5",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "dd5fc85c-e3c3-45ae-a0cb-21032bfcfb08",
+    "bucket": ".5-.75",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "33d93c70-d6c7-4c01-9797-ecafaece44e2",
+    "bucket": ".5-.75",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "ab47e509-3bfb-4ea9-b95b-f83da3121378",
+    "bucket": ".5-.75",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "512523f7-cdcb-443d-bbca-a7eab362944f",
+    "bucket": ".5-.75",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "5d0d82e9-1eb0-4488-b57d-18b35865cc1f",
+    "bucket": ".5-.75",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "58eeea7a-710e-48d1-a83b-7c6b9e95e8d6",
+    "bucket": ".5-.75",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "a454a7ca-2063-4b28-b7d1-2c7d5b21514c",
+    "bucket": ".5-.75",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "5ae7f8c0-43dc-475d-a8ec-e3a17c01b695",
+    "bucket": ".5-.75",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "5fc38948-2124-409d-92ce-5174a94bf421",
+    "bucket": ".5-.75",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "f9e13b55-d930-4454-821a-11fa199c753e",
+    "bucket": ".5-.75",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "69ff1fc4-e1ae-4afd-abeb-da740b50d673",
+    "bucket": ".5-.75",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "e0c9c461-e410-4e96-a857-d3ba2017235f",
+    "bucket": ".5-.75",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "4e4d4680-19a1-4e79-b994-7779a74d72ca",
+    "bucket": ".5-.75",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "d3dc6019-50a4-4412-8451-ed53e213710b",
+    "bucket": ".5-.75",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "df8613ee-84f7-442b-8c53-fda2178d4e7c",
+    "bucket": ".5-.75",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "da902935-d5d4-4087-9961-041fc484dac2",
+    "bucket": ".5-.75",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "708c8c55-6c1a-4ca0-af11-c24bd784f9ce",
+    "bucket": ".5-.75",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "4ba05816-f579-4438-92b2-39818f26bd43",
+    "bucket": ".5-.75",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "136bcbf7-89ca-4de7-993a-4d298a27d089",
+    "bucket": ".5-.75",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "01f6ec5f-8677-4b90-8814-23719b1bed8f",
+    "bucket": ".5-.75",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "02b147d5-84a9-41c3-83ca-b7a5fa0ee3f2",
+    "bucket": ".5-.75",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "237e82fb-5fff-4bc9-b4de-7d3dd4f6aad3",
+    "bucket": ".5-.75",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "4527db9e-77ca-4277-bcc2-8b965c3b7211",
+    "bucket": ".5-.75",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "deef2e68-cd9a-448d-bd11-ab0e4df936bc",
+    "bucket": ".5-.75",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "3b3db1f5-5e83-411d-922e-d8c188e73d63",
+    "bucket": ".5-.75",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "4e2a96d5-d408-4b7d-a473-ded0186bd77f",
+    "bucket": ".5-.75",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "81d605b7-4171-46c3-99e9-0b8fd83c7981",
+    "bucket": ".5-.75",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "c3f17c63-bad9-4b3a-b0d6-73d6c6914bf6",
+    "bucket": ".5-.75",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "de679487-5d67-46fd-a1b1-e0bf2bea123d",
+    "bucket": ".5-.75",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "576b501a-7b77-491f-aaea-2d3f350b2de0",
+    "bucket": ".5-.75",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "5f581da6-99db-485b-8bc1-f041524d4d09",
+    "bucket": ".5-.75",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "33a8f936-ecbe-4934-b3cb-0278579ecffb",
+    "bucket": ".5-.75",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "46152872-81fc-4b83-8a45-7e9be5e066ac",
+    "bucket": ".5-.75",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "13f4fbae-e893-4ee3-b276-6a76cc8e7d2b",
+    "bucket": ".5-.75",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "c0ac1f3e-6356-44f5-940f-806580ffb24c",
+    "bucket": ".5-.75",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "0bc5fe50-658a-4902-a3a2-e1034b63b98c",
+    "bucket": ".5-.75",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "d788fb56-d666-4b4d-bfa5-411df374d206",
+    "bucket": ".5-.75",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "799a95b5-1a83-4274-b8f8-ca59ca2af63e",
+    "bucket": ".5-.75",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "f4dc33d1-dcb9-41dc-b1b1-340a47b2ed83",
+    "bucket": ".5-.75",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "339e3db1-7026-4599-96e3-4d8f8fdd29f0",
+    "bucket": ".5-.75",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "663d87a0-db1b-48b2-b563-f81bca9b5bf1",
+    "bucket": ".5-.75",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "c05c26ac-2ce3-425a-be9f-37060f3a9dd2",
+    "bucket": ".5-.75",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "1967755f-f45e-4cf4-8ebc-6891829d54ed",
+    "bucket": ".5-.75",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "6b6fca41-2382-49fa-bd51-740972111cc1",
+    "bucket": ".5-.75",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "434f18e9-435d-410c-b770-66eef5181c31",
+    "bucket": ".5-.75",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "22f5b8aa-8420-4f39-8dc2-101111904790",
+    "bucket": ".5-.75",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "9a7afe3f-19d6-4fc8-88ef-ef2e2c4c0896",
+    "bucket": ".5-.75",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "16771d40-3e91-4b2e-bff9-84cbbaa8d702",
+    "bucket": ".5-.75",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "93da90f7-23b6-4e94-84a7-8c48c5d3a3d9",
+    "bucket": ".5-.75",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "22a824e8-a62f-4715-b1d5-c596e490bb48",
+    "bucket": ".5-.75",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "464f29a4-8faf-40f1-ae19-ebe3c61ddba6",
+    "bucket": ".5-.75",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "6231948d-95b8-4757-8dc4-084240c4eae1",
+    "bucket": ".5-.75",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "f0fb44c2-21ec-4f17-aa92-6f539138bc3f",
+    "bucket": ".5-.75",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "dec2c211-c699-48f1-b46b-6a1df1c9500c",
+    "bucket": ".5-.75",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "6a9910b6-0d1a-44ae-99ee-69834736a143",
+    "bucket": ".5-.75",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "49369bdf-f72e-47e3-9872-76847d842520",
+    "bucket": ".5-.75",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "91248b4c-fbdd-4f48-b12e-db323d5dbf0d",
+    "bucket": ".5-.75",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "4271424c-82a1-428f-928a-802e41e3b25f",
+    "bucket": ".5-.75",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "3a606ae1-ea5c-4cfb-a62f-7fe4ba8adc77",
+    "bucket": ".5-.75",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "211fa72f-8b8f-408f-b268-643dd2fdc491",
+    "bucket": ".5-.75",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "14119d62-b05a-495f-b05f-6f3d9b94d3ce",
+    "bucket": "easy(>.75)",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "f8dff8fe-a396-488b-bc58-6ae57f2cc3ef",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "46128e69-5e9c-4ca9-bf91-9696d5643078",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "cc65ac3a-ba04-4216-b8cc-e5364b004033",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "53e93af3-b4ef-423e-9cea-a27dad6bf8c6",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "c0659f3a-2792-4cc8-b669-9c50d7382147",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "cfd55e31-dbec-4d3c-ae59-2644bd86ea1b",
+    "bucket": "easy(>.75)",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "a01882aa-8823-4607-a960-b6db3af42fe8",
+    "bucket": "easy(>.75)",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "86908508-ff8d-4c3b-890d-ae3ccc5e3e7c",
+    "bucket": "easy(>.75)",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "cfe321e3-88f7-4a63-bdd0-697a15ab7915",
+    "bucket": "easy(>.75)",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "d0b05edf-c496-4b37-8fd2-0e2cf984ad6f",
+    "bucket": "easy(>.75)",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "11e15de3-1856-458b-9d47-87f80dc3c516",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "616e2677-4064-4589-b43e-877912268add",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "ee4ccdb6-7a84-4a65-bbc7-e186849bdbed",
+    "bucket": "easy(>.75)",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "5cfebaaa-68f9-4b61-a44e-1901534cbe3c",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "d3ac5268-ee36-4f79-8705-ce986c06e6fe",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "1cc3b783-8cf2-44f8-8c8b-6252d96d96a5",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "dd14e348-331e-4558-8973-56fdac123585",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "1f3c5f96-202d-4c63-a3b0-64c81e186fca",
+    "bucket": "easy(>.75)",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "fb0aa0af-7625-422b-a4b9-97ed1db4e8f3",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "28956be5-87c1-4a15-a6ca-533b880b98ed",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "cb70a117-ac04-4e2a-a40e-a57024eea91d",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "d362e7fc-70e0-4b73-8876-335e825a6ba6",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "b4251aeb-9c42-4ca6-a888-824f759b61ec",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.25
+  },
+  {
+    "idx": "c0b13fd6-6972-4d80-9122-861f468685f4",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "83892028-e416-402b-b686-71cdf03b0b54",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "a2d7437b-2311-48a0-9690-75fcbeaf877d",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "66462664-175c-4efb-b3ef-26d3b2c64340",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.375
+  },
+  {
+    "idx": "ef51d713-f2d0-4314-93b2-c8ff85af9b63",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "9cb8f262-6246-4e58-93e3-92668410eff2",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "d7c6211d-9b71-4f8c-b8dd-40a2684458cf",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "51439734-6f6b-4a14-b340-43fdea56b95c",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "e6878e06-8457-4ca5-b6da-6e2718f5abf5",
+    "bucket": "easy(>.75)",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "3ba530ed-3dfa-4943-a3bc-f66eb307746b",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "2bfeec2e-2688-4168-8198-b5f9788177dd",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "92579520-e2f1-44a2-bbdc-24f026e28258",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "f8cc47b6-68ae-4706-9c11-52c9cdeedbee",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "16b41f71-546a-4d93-bdbc-8163a083e3c5",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.0
+  },
+  {
+    "idx": "e37c9b88-27d0-4370-80f7-cdc28f1aa7d4",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "85e1cbcc-6a80-4c5b-946b-3c438bb381f0",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.125
+  },
+  {
+    "idx": "1cc49a67-d3b7-45d2-9637-edb76eb216db",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "953581c2-5fd6-4613-af7e-f777293a5758",
+    "bucket": "easy(>.75)",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "78582b06-ddcf-4008-ab07-e3ac829e873d",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "8bba544c-e669-4023-b8cc-fb756c42e3a2",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "7f4354af-cad7-48ee-b016-8cbd61f6a1c5",
+    "bucket": "easy(>.75)",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "ce2a5a45-ffed-4996-a618-475e74f9c4bb",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "1945c1c6-8d5b-4bbe-989c-ac98668af3ec",
+    "bucket": "easy(>.75)",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "73af046a-81c5-429a-829c-38625150641f",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "3fc736d0-f8a9-409d-98ed-5a271a7417e6",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "e6cd1041-abe0-455b-8d3a-38e4e2945efd",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "c8c4667b-70e3-4d1c-9bdd-f81934138bd9",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "051e2a7a-f841-4872-853e-0fa29de0f1ea",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "35267123-db81-478c-9fbe-ab57437d73f1",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "f8b9a7f0-c683-48c2-b090-71d62ac4070d",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "2c6a87b5-fcbf-41df-b542-29e43f62f9e4",
+    "bucket": "easy(>.75)",
+    "p_hat8": 1.0
+  },
+  {
+    "idx": "1a0e4187-910e-4afb-aea9-e35253b17686",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.625
+  },
+  {
+    "idx": "d8c08d50-0be3-462a-89a4-bf7021979f79",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.875
+  },
+  {
+    "idx": "b9d85a26-59fe-42e0-920a-331dc4b376d9",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.5
+  },
+  {
+    "idx": "86289c57-5eaa-4f05-9d57-ef7ec7f1cdb4",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.75
+  },
+  {
+    "idx": "4494fce7-e7f1-4542-9467-03363c86d037",
+    "bucket": "easy(>.75)",
+    "p_hat8": 0.75
+  }
+]

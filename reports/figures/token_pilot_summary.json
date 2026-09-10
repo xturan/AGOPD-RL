@@ -1,0 +1,20 @@
+{
+  "combo": {
+    "both_correct": [
+      0.137,
+      68
+    ],
+    "student_correct_teacher_wrong": [
+      0.137,
+      68
+    ],
+    "student_wrong_teacher_correct": [
+      0.137,
+      68
+    ],
+    "both_wrong": [
+      0.137,
+      68
+    ]
+  }
+}

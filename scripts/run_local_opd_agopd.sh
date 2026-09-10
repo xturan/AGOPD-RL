@@ -1,0 +1,95 @@
+#!/usr/bin/env bash
+# 本地 1.7B AGOPD smoke:GPU0 = 1.7B student + hybrid rollout, GPU1 = 4B-GRPO teacher
+set -euo pipefail
+PROJECT_DIR=${AGOPD_PROJECT_DIR:-${AGOPD_ROOT}}
+VERL_DIR=${PROJECT_DIR}/.runtime/verl-v0.8.0
+PYTHON_BIN=${AGOPD_PYTHON:-${HOME}/.conda/envs/agopd-vllm-281/bin/python3}
+STUDENT_MODEL=${STUDENT_MODEL:-${PROJECT_DIR}/models/Qwen3-1.7B}
+TEACHER_MODEL=${TEACHER_MODEL:-${PROJECT_DIR}/models/Qwen3-4B-grpo-50step-ckpt2}
+TRAIN_FILE=${PROJECT_DIR}/data/dapo-verl-v1/train.parquet
+VAL_FILE=${PROJECT_DIR}/data/dapo-verl-v1/val.parquet
+EXPERIMENT_NAME=${EXPERIMENT_NAME:-local_17_agopd_tgrpo_smoke}
+TENSORBOARD_DIR=${PROJECT_DIR}/tensorboard/${EXPERIMENT_NAME}
+OUTPUT_DIR=${PROJECT_DIR}/outputs/${EXPERIMENT_NAME}
+TRAIN_STEPS=${TRAIN_STEPS:-10}
+TRAIN_BATCH_SIZE=${TRAIN_BATCH_SIZE:-8}
+PPO_MINI_BATCH_SIZE=${PPO_MINI_BATCH_SIZE:-8}
+ROLLOUT_N=${ROLLOUT_N:-4}
+SAVE_FREQ=${SAVE_FREQ:--1}
+DISTILLATION_COEF=${DISTILLATION_COEF:-0.3}
+
+cd "${PROJECT_DIR}"
+export PYTHONPATH="${PROJECT_DIR}/src:${VERL_DIR}:${PYTHONPATH:-}"
+export PYTHONNOUSERSITE=1
+export LD_LIBRARY_PATH="${HOME}/.conda/envs/agopd-vllm-281/lib:${LD_LIBRARY_PATH:-}"
+export VLLM_WORKER_MULTIPROC_METHOD=spawn
+export WANDB_MODE=offline
+export HYDRA_FULL_ERROR=1
+export TENSORBOARD_DIR
+export CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0,1}"
+
+"${PYTHON_BIN}" -m verl.trainer.main_ppo \
+  algorithm.adv_estimator=grpo \
+  algorithm.use_kl_in_reward=False \
+  custom_reward_function.path="${PROJECT_DIR}/src/agopd/reward/verl_adapter.py" \
+  custom_reward_function.name=compute_score \
+  data.train_files="['${TRAIN_FILE}']" \
+  data.val_files="['${VAL_FILE}']" \
+  data.train_batch_size="${TRAIN_BATCH_SIZE}" \
+  data.seed=42 \
+  data.max_prompt_length=1024 \
+  data.max_response_length=2048 \
+  data.filter_overlong_prompts=True \
+  data.truncation=error \
+  data.dataloader_num_workers=0 \
+  actor_rollout_ref.model.path="${STUDENT_MODEL}" \
+  actor_rollout_ref.model.lora_rank=16 \
+  actor_rollout_ref.model.lora_alpha=16 \
+  +actor_rollout_ref.model.override_config.attn_implementation=sdpa \
+  actor_rollout_ref.actor.optim.lr=1e-4 \
+  actor_rollout_ref.actor.ppo_mini_batch_size="${PPO_MINI_BATCH_SIZE}" \
+  actor_rollout_ref.actor.use_kl_loss=True \
+  actor_rollout_ref.actor.kl_loss_coef=0.01 \
+  actor_rollout_ref.rollout.name=vllm \
+  actor_rollout_ref.rollout.nnodes=0 \
+  actor_rollout_ref.rollout.n_gpus_per_node=1 \
+  actor_rollout_ref.rollout.tensor_model_parallel_size=1 \
+  actor_rollout_ref.rollout.data_parallel_size=1 \
+  actor_rollout_ref.rollout.agent.num_workers=16 \
+  +actor_rollout_ref.rollout.enable_sleep_mode=True \
+  actor_rollout_ref.rollout.free_cache_engine=True \
+  actor_rollout_ref.rollout.gpu_memory_utilization=0.35 \
+  actor_rollout_ref.rollout.enforce_eager=False \
+  actor_rollout_ref.rollout.max_num_batched_tokens=16384 \
+  actor_rollout_ref.rollout.max_model_len=3073 \
+  actor_rollout_ref.rollout.n="${ROLLOUT_N}" \
+  actor_rollout_ref.rollout.temperature=0.6 \
+  actor_rollout_ref.rollout.top_p=0.95 \
+  actor_rollout_ref.rollout.top_k=20 \
+  distillation.enabled=True \
+  distillation.n_gpus_per_node=1 \
+  distillation.nnodes=1 \
+  distillation.teacher_models.teacher_model.model_path="${TEACHER_MODEL}" \
+  distillation.teacher_models.teacher_model.inference.name=vllm \
+  distillation.teacher_models.teacher_model.inference.tensor_model_parallel_size=1 \
+  distillation.teacher_models.teacher_model.inference.gpu_memory_utilization=0.6 \
+  distillation.teacher_models.teacher_model.inference.enforce_eager=False \
+  distillation.teacher_models.teacher_model.inference.max_num_batched_tokens=16384 \
+  distillation.teacher_models.teacher_model.inference.max_model_len=3073 \
+  distillation.teacher_after_advantage=True \
+  distillation.advantage_gate.enabled=True \
+  distillation.teacher_gate.enabled=True \
+  distillation.distillation_loss.loss_mode=forward_kl_topk \
+  distillation.distillation_loss.use_task_rewards=True \
+  distillation.distillation_loss.distillation_loss_coef="${DISTILLATION_COEF}" \
+  distillation.distillation_loss.hard_ce=True \
+  trainer.n_gpus_per_node=1 \
+  trainer.nnodes=1 \
+  trainer.total_training_steps="${TRAIN_STEPS}" \
+  trainer.save_freq="${SAVE_FREQ}" \
+  trainer.test_freq=-1 \
+  trainer.val_before_train=false \
+  trainer.project_name=agopd-rl \
+  trainer.experiment_name="${EXPERIMENT_NAME}" \
+  trainer.logger='["console","tensorboard"]' \
+  trainer.rollout_data_dir="${OUTPUT_DIR}/rollouts"

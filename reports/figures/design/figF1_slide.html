@@ -1,0 +1,90 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<title>figF1_slide</title>
+<style>
+:root{--main:#155b66;--aux:#9fb9b7;--red:#9c4b50;--neu:#6f7779;--ink:#22333a;--mut:#7c888b;--paper:#f6f6f3;--card:#ffffff;--line:#e3e6e5;}
+*{box-sizing:border-box;margin:0}
+body{font-family:"PingFang SC","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+.slide{width:1580px;padding:46px 52px}
+.eyebrow{font-size:15px;letter-spacing:.28em;color:var(--main);font-weight:700;text-transform:uppercase;margin-bottom:6px}
+h1{font-size:40px;font-weight:800;letter-spacing:.5px;line-height:1.15}
+.sub{font-size:17px;color:var(--mut);margin-top:10px;max-width:1200px}
+.timeline{margin:30px 0 6px;display:flex;align-items:center;position:relative}
+.step{flex:1;text-align:center;position:relative}
+.dot{width:26px;height:26px;border-radius:50%;border:4px solid #fff;box-shadow:0 0 0 3px var(--line);margin:0 auto;background:#d9dede;position:relative;z-index:2}
+.dot.err{background:var(--red);box-shadow:0 0 0 3px var(--red)}
+.step .name{font-size:15px;font-weight:700;margin-top:10px}
+.step .off{font-size:12.5px;color:var(--mut);margin-top:2px}
+.rail{position:absolute;left:4%;right:4%;top:34px;height:4px;background:#e0e4e3;z-index:1}
+.rail .wedge{position:absolute;left:33.3%;width:66.7%;height:4px;background:linear-gradient(90deg,var(--red) 0%,var(--red) 100%);opacity:.35}
+.grow{height:10px;margin:14px 20px 6px;display:flex;align-items:center;gap:8px}
+.arrowgap{margin:16px 6% 4px;position:relative;text-align:center}
+.arrowgap b{font-size:15px;color:var(--neu);letter-spacing:.5px}
+.lanes{display:flex;gap:22px;margin-top:22px}
+.lane{flex:1;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 24px;position:relative;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.lane .ltag{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.sw{width:12px;height:12px;border-radius:3px}
+.row{display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.cell{text-align:center;flex:1}
+.cell .big{font-size:42px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1}
+.cell .bcap{font-size:12px;color:var(--mut);margin-top:8px;line-height:1.4}
+.cell .pos{font-size:12px;color:var(--mut);margin-bottom:8px}
+.sep{color:#dfe3e2;font-size:26px;padding-bottom:20px}
+.legend{margin-top:18px;display:flex;gap:26px;flex-wrap:wrap;font-size:13.5px;color:var(--ink)}
+.legend .lg{display:inline-flex;align-items:center;gap:8px}
+.sq{width:14px;height:14px;border-radius:3px}
+.example{margin-top:26px;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--main);border-radius:12px;padding:16px 22px;font-size:15px;line-height:1.6}
+.example b{color:var(--main)}
+.expline{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:6px}
+.wrong{color:var(--red);text-decoration:line-through;text-decoration-thickness:2px;background:#f7e9e9;padding:2px 10px;border-radius:6px}
+.fix{color:var(--main);background:#e7f1f1;padding:2px 10px;border-radius:6px;font-weight:700}
+.arrow{color:var(--mut);font-size:20px}
+.note{color:var(--mut);font-size:13px;margin-top:8px}
+</style></head><body><div class="slide">
+<div class="eyebrow">Appendix F · Same-state probe</div>
+<h1>教师救回率随错误加深而衰减</h1>
+<div class="sub">同一个错误轨迹上取两个观测点:错误刚发生(锚点)与其后 64 词元;对照=同题正确轨迹同位前缀。测“把此前缀原样交给教师续写,还能答对的比例”。</div>
+
+<div class="timeline">
+  <div class="rail"><div class="wedge"></div></div>
+  <div class="step"><div class="dot"></div><div class="name">Root</div><div class="off">尚未出错</div></div>
+  <div class="step"><div class="dot err"></div><div class="name">Error anchor&nbsp;(t*)</div><div class="off">第一个无效推理单元</div></div>
+  <div class="step"><div class="dot err"></div><div class="name">+64 tokens</div><div class="off">错误继续累积</div></div>
+</div>
+<div class="arrowgap"><b>→ 学生沿错误轨迹越走越远 →</b></div>
+
+<div class="lanes">
+  <div class="lane">
+    <div class="ltag"><span class="sw" style="background:#155b66"></span>教师续写起点 · 同题正确前缀(对照)</div>
+    <div class="row">
+      <div class="cell"><div class="pos">Root</div><div class="big" style="color:#155b66">32.8<span style="font-size:22px">%</span></div></div>
+      <div class="cell"><div class="pos">Anchor</div><div class="big" style="color:#155b66">62.5<span style="font-size:22px">%</span></div></div>
+      <div class="cell"><div class="pos">+64</div><div class="big" style="color:#155b66">54.7<span style="font-size:22px">%</span></div></div>
+    </div>
+    <div class="bcap">正常状态本可答对,是教师能力的基线</div>
+  </div>
+  <div class="lane">
+    <div class="ltag"><span class="sw" style="background:#9c4b50"></span>教师续写起点 · 已错前缀(错误轨迹)</div>
+    <div class="row">
+      <div class="cell"><div class="pos">Root</div><div class="big" style="color:#9c4b50">32.8<span style="font-size:22px">%</span></div></div>
+      <div class="cell"><div class="pos">Anchor</div><div class="big" style="color:#9c4b50">40.6<span style="font-size:22px">%</span></div></div>
+      <div class="cell"><div class="pos">+64</div><div class="big" style="color:#9c4b50">18.8<span style="font-size:22px">%</span></div></div>
+    </div>
+    <div class="bcap">错误越深,教师救回越少</div>
+  </div>
+</div>
+<div class="row" style="margin-top:10px;padding:0 24px">
+  <div class="cell"></div>
+  <div class="cell"><span style="background:#6f7779;color:#fff;padding:6px 14px;border-radius:20px;font-weight:700;font-size:15px">Δ −21.9 pp</span></div>
+  <div class="cell"><span style="background:#9c4b50;color:#fff;padding:6px 14px;border-radius:20px;font-weight:700;font-size:15px">Δ −35.9 pp<span style="font-weight:400;opacity:.85"> · 95% CI 不含 0</span></span></div>
+</div>
+
+<div class="example">
+  <b>具体到词元:</b>锚点处教师仍能当场纠正同一句——
+  <div class="expline">
+    <span>学生错写:</span><span class="wrong">gcd(N,20)=1, must not be divisible by 4 or 5</span>
+    <span class="arrow">→</span>
+    <span>教师续写纠正:</span><span class="fix">gcd(N,20)=1, must not be divisible by 2 or 5</span>
+  </div>
+  <div class="note">注:越靠近错误点,教师越能“在同一句内改回来”;深入 64 词元后,该能力明显丢失(0/8 或 1/8 的 Case)。数字为 8 题×8 续写合计;配对 bootstrap 95% CI。</div>
+</div>
+</div></body></html>

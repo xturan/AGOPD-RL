@@ -1,0 +1,9 @@
+# Keep the local 4090 environment aligned with the validated cloud vLLM stack.
+# Do not remove these pins without rerunning the environment smoke checks.
+numpy==1.26.4
+setuptools<82
+torch==2.8.0
+torchvision==0.23.0
+torchaudio==2.8.0
+transformers==4.55.4
+tensordict==0.9.1

@@ -1,0 +1,13 @@
+{
+  "model": "models/Qwen3-1.7B-grpo-step120",
+  "data": "data/dapo-verl-v1/val.parquet",
+  "rows": 1024,
+  "correct": 123,
+  "accuracy": 0.1201171875,
+  "answer_marker_rate": 0.896484375,
+  "boxed_marker_rate": 0.8359375,
+  "closed_thinking_rate": 1.0,
+  "truncation_rate": 0.103515625,
+  "response_length_mean": 958.669921875,
+  "sampling": {"temperature": 0.6, "top_p": 0.95, "top_k": 20, "max_new_tokens": 2048, "seed": 42}
+}

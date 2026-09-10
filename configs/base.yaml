@@ -1,0 +1,55 @@
+project:
+  name: agopd-rl
+  seed: 42
+
+paths:
+  dataset: data/dapo-math-17k/data/dapo-math-17k.parquet
+  student_model: models/Qwen3-1.7B
+  teacher_model: models/Qwen3-4B
+
+data:
+  prompt_column: prompt
+  reward_column: reward_model
+  id_column: extra_info
+  smoke_limit: 8
+
+reward:
+  type: rule_math
+  correct: 1.0
+  wrong: 0.0
+
+rollout:
+  group_size: 8
+  temperature: 1.0
+  top_p: 0.95
+  max_response_tokens: 4096
+
+rl:
+  algorithm: grpo
+  advantage_eps: 1.0e-6
+
+opd:
+  enabled: false
+  lambda_opd: 0.1
+  kl_type: reverse
+  top_k: 16
+
+advantage_gate:
+  enabled: false
+  threshold: 0.0
+  max_weight: 2.0
+
+disagreement_gate:
+  enabled: false
+  metric: js
+  tau_low: 0.05
+  tau_high: 0.50
+
+teacher_budget:
+  enabled: false
+  ratio: 0.30
+  score: advantage_x_disagreement_x_entropy
+
+logging:
+  wandb: false
+  save_trajectory_samples: true

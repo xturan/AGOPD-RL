@@ -1,0 +1,23 @@
+{
+  "model": "${AGOPD_ROOT}/models/Qwen3-1.7B-e1-lora-60step",
+  "data": "${AGOPD_ROOT}/data/dapo-verl-v1/val.parquet",
+  "rows": 1024,
+  "correct": 250,
+  "accuracy": 0.244140625,
+  "semantic_accuracy": 0.275390625,
+  "strict_contract_accuracy": 0.1171875,
+  "answer_parse_rate": 0.82421875,
+  "answer_marker_rate": 0.25390625,
+  "boxed_marker_rate": 0.703125,
+  "closed_thinking_rate": 1.0,
+  "truncation_rate": 0.1923828125,
+  "response_length_mean": 1256.22265625,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_new_tokens": 2048,
+    "seed": 42
+  },
+  "thinking": false
+}

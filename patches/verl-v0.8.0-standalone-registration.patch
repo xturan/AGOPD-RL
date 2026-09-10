@@ -1,0 +1,21 @@
+--- a/verl/workers/rollout/vllm_rollout/vllm_rollout.py
++++ b/verl/workers/rollout/vllm_rollout/vllm_rollout.py
+@@ -126,4 +126,16 @@
+         # Lazy init http server adapter because http server is launched after hybrid engine.
+         if self.server_handle is None:
+             prefix = self._get_server_name_prefix()
+-            self.server_handle = ray.get_actor(f"{prefix}server_{self.replica_rank}_{self.node_rank}")
++            actor_name = f"{prefix}server_{self.replica_rank}_{self.node_rank}"
++            if self.config.nnodes > 0:
++                deadline = time.monotonic() + 600.0
++                while True:
++                    try:
++                        self.server_handle = ray.get_actor(actor_name)
++                        break
++                    except ValueError:
++                        if time.monotonic() >= deadline:
++                            raise
++                        time.sleep(1.0)
++            else:
++                self.server_handle = ray.get_actor(actor_name)
+         return True

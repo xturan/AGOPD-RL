@@ -1,0 +1,12 @@
+--- a/verl/workers/rollout/vllm_rollout/vllm_rollout.py
++++ b/verl/workers/rollout/vllm_rollout/vllm_rollout.py
+@@ -81,5 +81,8 @@
+         )
+         if replica_rank == -1:
+-            self.replica_rank = rank // rollout_world_size
++            # A standalone server is created once per configured rollout
++            # replica, outside the actor worker group. All actor ranks must
++            # therefore address that same server replica.
++            self.replica_rank = 0 if config.nnodes > 0 else rank // rollout_world_size
+         else:
+             self.replica_rank = replica_rank

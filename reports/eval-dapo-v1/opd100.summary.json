@@ -1,0 +1,20 @@
+{
+  "model": "models/Qwen3-1.7B-opd100",
+  "data": "data/dapo-verl-v1/val.parquet",
+  "rows": 1024,
+  "correct": 191,
+  "accuracy": 0.1865234375,
+  "answer_marker_rate": 0.2705078125,
+  "boxed_marker_rate": 0.4375,
+  "closed_thinking_rate": 1.0,
+  "truncation_rate": 0.3427734375,
+  "response_length_mean": 1494.6796875,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_new_tokens": 2048,
+    "seed": 42
+  },
+  "thinking": false
+}

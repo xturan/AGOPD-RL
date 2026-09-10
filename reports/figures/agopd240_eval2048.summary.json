@@ -1,0 +1,23 @@
+{
+  "model": "models/stage2b_agopd240",
+  "data": "data/dapo-verl-v1/val.parquet",
+  "rows": 1024,
+  "correct": 277,
+  "accuracy": 0.2705078125,
+  "semantic_accuracy": 0.271484375,
+  "strict_contract_accuracy": 0.20703125,
+  "answer_parse_rate": 0.708984375,
+  "answer_marker_rate": 0.5126953125,
+  "boxed_marker_rate": 0.3037109375,
+  "closed_thinking_rate": 1.0,
+  "truncation_rate": 0.3037109375,
+  "response_length_mean": 1394.94140625,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_new_tokens": 2048,
+    "seed": 42
+  },
+  "thinking": false
+}

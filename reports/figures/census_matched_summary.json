@@ -1,0 +1,9 @@
+{
+  "protocol": "matched-subset cross-scale census (non-A1). seed42 sample of 2000 DAPO train prompts; per prompt n=8, no-think chat-template rendering (evaluate-style), T=0.6 top-p .95 top-k20, max 2048, rule-verifier strict scoring. Absolute levels NOT comparable to Appendix A.1 full 16,164 census (different prompt/generation pipeline).",
+  "models": {
+    "Qwen3-1.7B": {"n_prompts": 2000, "p0": 0.4950, "p0_ci": [0.4731, 0.5169], "mean_p": 0.2291, "S_G4": 0.3073, "S_G6": 0.3664, "S_G8": 0.3992},
+    "Qwen3-4B":  {"n_prompts": 2000, "p0": 0.3885, "p0_ci": [0.3671, 0.4099], "mean_p": 0.3014, "S_G4": 0.3486, "S_G6": 0.4172, "S_G8": 0.4558}
+  },
+  "artifacts": {"1p7b": "outputs/census_17/shard*.jsonl", "4b": "outputs/census_4b/shard*.jsonl"},
+  "status": "relative direction only; A.1 reconciliation pending"
+}

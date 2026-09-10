@@ -1,0 +1,23 @@
+{
+  "model": "${AGOPD_ROOT}/models/Qwen3-1.7B",
+  "data": "${AGOPD_ROOT}/data/dapo-verl-v1/val.parquet",
+  "rows": 256,
+  "correct": 66,
+  "accuracy": 0.2578125,
+  "semantic_accuracy": 0.23828125,
+  "strict_contract_accuracy": 0.05859375,
+  "answer_parse_rate": 0.7890625,
+  "answer_marker_rate": 0.30078125,
+  "boxed_marker_rate": 0.69140625,
+  "closed_thinking_rate": 1.0,
+  "truncation_rate": 0.20703125,
+  "response_length_mean": 1275.56640625,
+  "sampling": {
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "max_new_tokens": 2048,
+    "seed": 42
+  },
+  "thinking": false
+}

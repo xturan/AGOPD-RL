@@ -1,0 +1,79 @@
+{
+ "fine": [
+  {
+   "bucket": "p_hat=0.0",
+   "n": 519,
+   "p_S_base": 0.0,
+   "p_grpo": 0.056,
+   "gain": 0.056,
+   "rlen": 1473
+  },
+  {
+   "bucket": "p_hat=0.125",
+   "n": 137,
+   "p_S_base": 0.125,
+   "p_grpo": 0.292,
+   "gain": 0.167,
+   "rlen": 1291
+  },
+  {
+   "bucket": "p_hat=0.25",
+   "n": 83,
+   "p_S_base": 0.25,
+   "p_grpo": 0.373,
+   "gain": 0.123,
+   "rlen": 1288
+  },
+  {
+   "bucket": "p_hat=0.375",
+   "n": 63,
+   "p_S_base": 0.375,
+   "p_grpo": 0.333,
+   "gain": -0.042,
+   "rlen": 1220
+  },
+  {
+   "bucket": "p_hat=0.5",
+   "n": 56,
+   "p_S_base": 0.5,
+   "p_grpo": 0.696,
+   "gain": 0.196,
+   "rlen": 930
+  },
+  {
+   "bucket": "p_hat=0.625",
+   "n": 40,
+   "p_S_base": 0.625,
+   "p_grpo": 0.8,
+   "gain": 0.175,
+   "rlen": 1005
+  },
+  {
+   "bucket": "p_hat=0.75",
+   "n": 45,
+   "p_S_base": 0.75,
+   "p_grpo": 0.8,
+   "gain": 0.05,
+   "rlen": 837
+  },
+  {
+   "bucket": "p_hat=0.875",
+   "n": 52,
+   "p_S_base": 0.875,
+   "p_grpo": 0.731,
+   "gain": -0.144,
+   "rlen": 815
+  },
+  {
+   "bucket": "p_hat=1.0",
+   "n": 29,
+   "p_S_base": 1.0,
+   "p_grpo": 0.862,
+   "gain": -0.138,
+   "rlen": 653
+  }
+ ],
+ "total": 1024,
+ "overall_base": 0.217529296875,
+ "overall_grpo": 0.2841796875
+}
