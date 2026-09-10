@@ -340,6 +340,10 @@ main.paper mjx-container[display="true"] * ,
 #appendix mjx-container[display="true"] * { text-align: inherit; }
 
 
+
+/* display equations as their own centered paragraph (MathJax-independent) */
+p.eq-only{text-align:center;text-align-last:center;margin:1.1em 0}
+
 </style>
 
 </head>
@@ -391,7 +395,7 @@ A_i=\frac{r_i-\mu_r}{\sigma_r+\epsilon},\qquad \mu_r=\frac{1}{G}\sum_{j=1}^{G}r_
 \]
 <p>由式 (2) 可知，当 \(p\rightarrow0\) 或 \(p\rightarrow1\) 时，EGR 均趋近于 0。因此，数据集平均准确率并不能直接反映组相对强化学习的有效信号密度。本文仅将 EGR 作为训练信号诊断量，而不将其作为 AGOPD 的门控规则。</p>
 <h3>2.4 在线策略蒸馏</h3>
-<p>在线策略蒸馏在学生模型自身生成的轨迹上计算教师分布。令第 \(i\) 条学生轨迹在词元 \(t\) 之前的状态为 \(s_{i,t}=(x,y_{i,\lt t})\)。其一般形式为逐词元的学生—教师分布散度：\[ \ell_{\mathrm{OPD}}(i,t)=D\bigl(\pi_\theta(\cdot\mid s_{i,t})\,\|\,\pi_T(\cdot\mid s_{i,t})\bigr) \tag{3} \]散度 \(D\) 的两种常用实例为反向 KL 与硬目标交叉熵；硬目标取教师分布的最大概率词元 \(z^T_{i,t}=\arg\max_v\pi_T(v\mid s_{i,t})\)，并以 \(-\log\pi_\theta(z^T_{i,t}\mid s_{i,t})\) 为目标（本文主实验采用硬目标，见 §4.3）。该训练方式使教师监督覆盖学生策略实际访问的状态，但同时引入一个前提：教师模型在这些状态上提供的局部条件分布应当具有教学价值 <a href="#ref4">[4]</a>——§3 将直接检验该前提。</p>
+在线策略蒸馏在学生模型自身生成的轨迹上计算教师分布。令第 \(i\) 条学生轨迹在词元 \(t\) 之前的状态为 \(s_{i,t}=(x,y_{i,\lt t})\)。其一般形式为逐词元的学生—教师分布散度：<p class="eq-only">\[ \ell_{\mathrm{OPD}}(i,t)=D\bigl(\pi_\theta(\cdot\mid s_{i,t})\,\|\,\pi_T(\cdot\mid s_{i,t})\bigr) \tag{3} \]</p><p>散度 \(D\) 的两种常用实例为反向 KL 与硬目标交叉熵；硬目标取教师分布的最大概率词元 \(z^T_{i,t}=\arg\max_v\pi_T(v\mid s_{i,t})\)，并以 \(-\log\pi_\theta(z^T_{i,t}\mid s_{i,t})\) 为目标（本文主实验采用硬目标，见 §4.3）。该训练方式使教师监督覆盖学生策略实际访问的状态，但同时引入一个前提：教师模型在这些状态上提供的局部条件分布应当具有教学价值 <a href="#ref4">[4]</a>——§3 将直接检验该前提。</p>
 <h3>2.5 条件教师优势</h3>
 <p>为刻画教师模型的相对有效性，本文在学生能力区间 \(b\) 上定义条件教师优势：</p>
 \[
