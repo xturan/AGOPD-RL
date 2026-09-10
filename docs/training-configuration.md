@@ -34,11 +34,11 @@ for p in patches/verl-v0.8.0-*.patch; do git -C verl apply "../$p"; done
 GPU0 ┐
 GPU1 ├─ 学生 FSDP 训练 + 同卡混合 rollout(vLLM)      # rollout.nnodes=0
 GPU2 ┘
-GPU3 ──── 教师推理(vLLM,TP=1;多 replica 用数据并行而非 TP2)
+GPU3 ──── 教师推理(vLLM,单卡 TP=1、单 replica;不使用 TP2)
 ```
 
 - **3+1 混合拓扑**:学生训练与采样复用 3 卡(vLLM hybrid,`enable_sleep_mode=True`、`free_cache_engine=True`),教师独占 1 卡;
-- 教师侧选择 **TP1 × 数据并行** 而非 TP2:长文本生成的吞吐受并发请求数约束大于单请求延迟;
+- 教师侧:**单卡 TP1、单 replica**,不使用 TP2(张量并行需逐层通信,对长生成吞吐收益有限);若需扩展教师并发,方案方向是 **TP1 × 多 replica(数据并行)**,该扩展未在本仓库实验中启用;
 - 引擎参数:`max_num_batched_tokens=16384`、`rollout.agent.num_workers=16`、`max_model_len=3073`、`enforce_eager=False`(CUDA Graph 需端到端验证后再启用);
 - 显存策略:配额只在出现 KV 不足告警时提高,**不把空余显存当作必须填满的目标**。
 
