@@ -60,6 +60,32 @@
 
 **任一条不满足 → 不要无条件开 OPD**;应改为门控(优势门 + 教师胜任门)、软目标(反向 KL / tail-aware top-k)、系数 warmup→anneal,或干脆先不用。
 
+## 训练配置与硬件配置（摘要）
+
+### 硬件与拓扑
+
+| 环境 | 配置 | 约束 |
+|---|---|---|
+| 云端（主实验） | **4 × A100 80GB**；3+1 混合：学生 FSDP 训练 + 同卡 rollout 占 3 卡，教师独占 1 卡 | 教师用 **TP1 × 数据并行**（长生成吞吐受并发约束 > 单请求延迟） |
+| 本地（探索/调试） | 2 × RTX 4090 24GB | 8B 级模型需 `gpu_memory_utilization ≤ 0.85`、`max_num_batched_tokens ≤ 8192`；该卡型多卡 FSDP 存在 NCCL P2P 限制 → 默认单卡 |
+
+### 训练配方
+
+| 项 | 1.7B 全参数 | 4B LoRA |
+|---|---|---|
+| 优化通道 | full-param | **LoRA `r=16` + `lr=1e-4`** |
+| KL 系数 | `0.05` | `0.05` |
+| batch / mini-batch | `8 / 4` | `12 / 6` |
+| rollout 组大小 | `6` | `4` |
+| 序列预算 | prompt 1024 + response 2048 | 同左（`max_model_len 3073`） |
+| 采样可比性 | `data.seed=42` | `data.seed=42` |
+
+引擎/拓扑开关:`rollout.nnodes=0`（actor/rollout 同卡混合）、`enable_sleep_mode=True`、`free_cache_engine=True`、`max_num_batched_tokens=16384`、`rollout.agent.num_workers=16`、`enforce_eager=False`。
+
+OPD 相关开关:`hard_ce` / `reverse_kl` / `temperature`（目标形式）、`coef_schedule=warmup_anneal`（系数调度）、`teacher_after_advantage` + `advantage_gate` + `teacher_gate`（作用域门控）。
+
+完整版本钉扎、数据划分、评估协议与运行纪律见 **[`docs/training-configuration.md`](docs/training-configuration.md)**。
+
 ## 仓库结构
 
 ```
