@@ -17,10 +17,10 @@
 
 ## 📄 论文(中英双版 · 45 页深度研究报告)
 
-| 版本 | 语言 | 规模 | 链接 |
-|---|---|---:|---|
-| AGOPD v6.0 · restructured | 中文 | ~45 页 | [`reports/AGOPD_paper_v6_0_restructured_20260908.html`](reports/AGOPD_paper_v6_0_restructured_20260908.html) |
-| AGOPD v6.0 · restructured | English | ~45 页 | [`reports/AGOPD_paper_v6_0_restructured_20260908_en.html`](reports/AGOPD_paper_v6_0_restructured_20260908_en.html) |
+| 版本 | 语言 | 页数 | HTML（自包含，可离线） | PDF |
+|---|---|---:|---|---|
+| AGOPD v6.0 · restructured | 中文 | 45 | [`….html`](reports/AGOPD_paper_v6_0_restructured_20260908.html) | [`….pdf`](reports/AGOPD_paper_v6_0_restructured_20260908.pdf) |
+| AGOPD v6.0 · restructured | English | 59 | [`…_en.html`](reports/AGOPD_paper_v6_0_restructured_20260908_en.html) | [`…_en.pdf`](reports/AGOPD_paper_v6_0_restructured_20260908_en.pdf) |
 
 > 两份均为**自包含 HTML**(图表以 data-URI 内嵌,单文件即可离线阅读),覆盖:负迁移机制诊断 → 受控四臂对照 → 状态级可恢复性探针 → 跨规模验证与工程附录。
 > 仓库同时提供 `src/`、`scripts/`、`patches/` 与 `reports/figures/`,可对照论文逐节复现。

@@ -318,6 +318,26 @@ figure.fig-diagnosis {
 @media(max-width:760px){.jstats{grid-template-columns:repeat(2,1fr)}}
 figure.figJ{max-width:800px}
 html, body { overflow-x: hidden; }
+
+/* ===== display equations: standalone centered blocks (v6.4 fix) ===== */
+main.paper mjx-container[display="true"],
+#appendix mjx-container[display="true"],
+section#appendix mjx-container[display="true"] {
+  display: block !important;
+  text-align: center !important;
+  margin: 1.1em auto !important;
+}
+/* paragraphs whose only content is a display equation must not be justified */
+main.paper p:has(> mjx-container[display="true"]:only-child),
+#appendix p:has(> mjx-container[display="true"]:only-child) {
+  text-align: center !important;
+  text-align-last: center !important;
+}
+/* keep a display equation out of inter-ideograph stretching of the host line box */
+main.paper mjx-container[display="true"] * ,
+#appendix mjx-container[display="true"] * { text-align: inherit; }
+
+
 </style>
 <header class="mast"><div class="mast-in"><a class="brand" href="#top">AGOPD-RL</a><span>Evidence-audited working paper · English translation</span><span class="spacer"></span><span>08 Sep 2026 · v5.8 diagnosis prose/figure revision</span></div></header>
 <header class="head" id="top">
