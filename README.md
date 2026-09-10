@@ -68,6 +68,40 @@
 
 结论:无条件 RL+OPD 显著拖累;门控收回大部分损失,但未超越纯 GRPO。
 
+## 研究报告简版（要点与关键图）
+
+**摘要.** 在线策略蒸馏(OPD)把教师分布当作学生自生成轨迹上的稠密监督，常被视为"免费的密集信号"；但在小模型 + 结果奖励 RL 的组合里，它往往不是零收益，而是**负收益**。本研究报告给出可复现的因果证据链：先用 1.7B 学生的受控四臂实验确认"无条件 RL+OPD 相对纯 GRPO 显著退化"（固定 1,024 题、逐题配对检验）；再把退化拆成五个**可证伪假设**，以"错误前缀深度 × 等长对照"把**上下文长度**与**错误语义**分离，并以**门控消融**提供单变量因果证据；最后落到方法——**只在"负优势轨迹 ∩ 教师可解题目"处施加蒸馏**（AGOPD 两级门控），并给出 4×A100 上的训练/推理拓扑与引擎参数优化。报告亦明确边界：门控能收回大部分退化，但在该设定下**并未超越纯结果监督 RL**。
+
+### 图 2 · 教师监督：从题目级能力到状态级可恢复性
+
+<table><tr>
+<td><img src="reports/figures/readme/fig2_teacher_state_rescue_a.png" alt="teacher advantage at the problem root"/></td>
+<td><img src="reports/figures/readme/fig2_teacher_state_rescue_b.png" alt="teacher rescue vs erroneous-prefix depth"/></td>
+<td><img src="reports/figures/readme/fig2_teacher_state_rescue_c.png" alt="length-matched state control"/></td>
+</tr></table>
+
+*教师在**题目根状态**上于各能力区间保持优势；(b) 随**学生错误前缀加深**，教师救援率持续下降；(c) **长度匹配对照**显示：错误前缀低于等长随机填充，而正确前缀高于错误前缀——决定可恢复性的是前缀的**推理语义**，不是长度。*
+
+### 图 4 · 难度分层能力轮廓（雷达）
+
+![难度分层能力轮廓](reports/figures/readme/fig4_difficulty_radar.png)
+
+*五条半径对应按 Base 学生能力估计划分的五个区间(Hard→Easy)；门控方法的恢复在难度轴上**非均匀**，固定教师轮廓在多数区间位于最外层。*
+
+### 图 5 · 门控动态与蒸馏作用域
+
+![门控动态](reports/figures/readme/fig5_gate_dynamics_a.png)
+
+*负优势门平均放行约 **40%** 轨迹进入候选，教师胜任门再保留其中约 **62%**，使平均蒸馏损失降到无条件 OPD 的约五分之一，而两者策略熵几乎相同。*
+
+### 图 J1 · rollout 拓扑优化前后的耗时对比（工程附录）
+
+![拓扑优化前后对比](reports/figures/readme/figJ1_topo_optimization.png)
+
+*3+1 混合拓扑 + sleep-mode 增量同步：逐步权重同步由 **13–15s → 0.64–0.80s(−95%)**，端到端单步 **132.1s → ~97s(−27%)**，actor 更新 **52.3s → 35.8s**。*
+
+> 以上为**简版**;完整的机制推导、附录（数据/协议/统计口径/工程附录）见上面链接的中英双版研究报告。
+
 ## 负迁移的假设与验证链
 
 负迁移不是一句结论,而是一组**相互竞争的解释 + 逐条证伪实验**:
